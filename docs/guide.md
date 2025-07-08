@@ -1,10 +1,8 @@
-# Documentation Guide
+# Initial Guide
 
-This is the main documentation.
-
-## Getting Started
+This is the initial guide.
 
 ```python
-def hello():
-    return "Hello from Python"
+def initial_function():
+    return "Initial Python code"
 ```
