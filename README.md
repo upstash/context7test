@@ -1,10 +1,10 @@
-# Version Test Repository
+# Test Repository
 
-This is the main branch with comprehensive documentation.
+This is a test repository for Context7 parsing.
 
 ```javascript
-// Main branch feature
-function mainBranchFunction() {
-  return "Main branch implementation";
+// Basic example
+function testFunction() {
+  return "Hello World";
 }
 ```
