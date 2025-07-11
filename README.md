@@ -1,10 +1,10 @@
-# Version 1.0 Documentation
+# Version Test Repository
 
-This is version 1.0 with simpler documentation.
+This is the main branch with comprehensive documentation.
 
 ```javascript
-// Version 1.0 implementation
-function v1Function() {
-  return "Version 1.0";
+// Main branch feature
+function mainBranchFunction() {
+  return "Main branch implementation";
 }
 ```
