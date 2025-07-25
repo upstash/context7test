@@ -1,8 +1,9 @@
-# Main Branch Guide
+# Guide
 
-This is the main branch documentation.
+This documentation should be included.
 
-```python
-def main_branch_function():
-    return "Main branch Python code"
+```javascript
+const includedConfig = {
+  feature: "included"
+};
 ```
