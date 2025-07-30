@@ -1,9 +1,10 @@
-# Guide
+# Documentation Guide
 
-This documentation should be included.
+This is the main documentation.
 
-```javascript
-const includedConfig = {
-  feature: "included"
-};
+## Getting Started
+
+```python
+def hello():
+    return "Hello from Python"
 ```
