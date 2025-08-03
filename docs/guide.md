@@ -1,8 +1,10 @@
-# Main Branch Guide
+# Documentation Guide
 
-This is the main branch documentation.
+This is the main documentation.
+
+## Getting Started
 
 ```python
-def main_branch_function():
-    return "Main branch Python code"
+def hello():
+    return "Hello from Python"
 ```
