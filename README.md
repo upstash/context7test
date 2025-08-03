@@ -1,10 +1,9 @@
-# Test Repository
+# Test Repository for Refresh
 
-This is a test repository for Context7 parsing.
+This is the initial state before refresh.
 
 ```javascript
-// Basic example
-function testFunction() {
-  return "Hello World";
+function initialFunction() {
+  return "Initial state";
 }
 ```
