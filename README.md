@@ -1,9 +1,10 @@
-# Exclude Folders Test
+# Version Test Repository
 
-This file should be included.
+This is the main branch with comprehensive documentation.
 
 ```javascript
-function includedFunction() {
-  return "This should be included";
+// Main branch feature
+function mainBranchFunction() {
+  return "Main branch implementation";
 }
 ```
