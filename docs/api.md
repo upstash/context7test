@@ -1,10 +1,13 @@
-# Main Branch API
+# API Reference
 
 ## Endpoints
 
+- GET /api/v1/test
+- POST /api/v1/data
+
 ```javascript
-const mainApi = {
-  version: "main",
-  endpoints: ["api/v1/main"]
+const api = {
+  baseUrl: "https://api.example.com",
+  version: "v1"
 };
 ```
