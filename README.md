@@ -1,15 +1,10 @@
-# Exclude Folders Test
+# Test Repository
 
-This file should be included.
-
-```javascript
-function includedFunction() {
-  return "This should be included";
-}
-```
+This is a test repository for Context7 parsing.
 
 ```javascript
-function anotherFunction() {
-  return "This should be included too ";
+// Basic example
+function testFunction() {
+  return "Hello World";
 }
 ```
