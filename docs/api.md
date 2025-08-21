@@ -1,13 +1,7 @@
-# API Reference
-
-## Endpoints
-
-- GET /api/v1/test
-- POST /api/v1/data
+# Initial API
 
 ```javascript
-const api = {
-  baseUrl: "https://api.example.com",
-  version: "v1"
+const initialApi = {
+  version: "1.0.0"
 };
 ```
