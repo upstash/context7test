@@ -1,68 +1,61 @@
-# Guide
+# Documentation Guide
 
-This documentation should be included because the 'docs' folder is not in the exclude list. This guide provides comprehensive information about the system.
+This is the main documentation guide for the Context7 test repository. This guide provides comprehensive information about how to use and understand the various features of our system.
 
-## Overview
+## Table of Contents
 
-The documentation in this folder represents important content that should be parsed and included in the Context7 output. This validates that:
+1. [Getting Started](#getting-started)
+2. [Installation](#installation)
+3. [Configuration](#configuration)
+4. [API Reference](#api-reference)
+5. [Examples](#examples)
+6. [Troubleshooting](#troubleshooting)
 
-1. Non-excluded directories are properly included
-2. Documentation folders are processed correctly
-3. Content meets minimum size requirements
-4. Multiple file types are supported
+## Getting Started
 
-## Configuration Example
+To begin using this system, you'll need to understand the basic concepts and architecture. Our system is designed to be flexible and extensible, supporting multiple programming languages and documentation formats.
 
-Here's how to configure the system to include specific documentation:
+### Prerequisites
 
-```javascript
-// This configuration should be included in the parsed output
-const includedConfig = {
-  feature: "included",
-  directory: "docs",
-  shouldParse: true,
-  minimumSize: 500,
-  settings: {
-    processMarkdown: true,
-    extractCodeBlocks: true,
-    includeInSearch: true,
-    priority: 'high'
-  }
-};
+Before you begin, ensure you have the following installed:
+- Node.js (version 14 or higher)
+- Python (version 3.7 or higher)
+- Git for version control
+- A modern text editor or IDE
 
-// Function to validate included content
-function validateIncludedContent(content) {
-  if (!content || content.length < includedConfig.minimumSize) {
-    console.warn('Content does not meet minimum size requirements');
-    return false;
-  }
-  
-  console.log('Content validated and included');
-  return true;
-}
+### Basic Setup
 
-// Process documentation files
-function processDocumentation(filePath, content) {
-  const result = {
-    path: filePath,
-    included: true,
-    size: content.length,
-    timestamp: new Date().toISOString(),
-    config: includedConfig
-  };
-  
-  if (validateIncludedContent(content)) {
-    result.status = 'processed';
-  } else {
-    result.status = 'skipped';
-  }
-  
-  return result;
-}
+```python
+# Python example with comprehensive error handling
+def hello(name=None):
+    """
+    Generate a greeting message.
+    
+    Args:
+        name (str, optional): The name to greet. Defaults to 'World'.
+    
+    Returns:
+        str: A formatted greeting message.
+    
+    Raises:
+        TypeError: If name is not a string or None.
+    """
+    if name is not None and not isinstance(name, str):
+        raise TypeError("Name must be a string")
+    
+    greeting_name = name if name else "World"
+    return f"Hello from Python, {greeting_name}!"
 
-module.exports = { includedConfig, validateIncludedContent, processDocumentation };
+# Example usage
+if __name__ == "__main__":
+    print(hello())  # Output: Hello from Python, World!
+    print(hello("Context7"))  # Output: Hello from Python, Context7!
 ```
 
-## Best Practices
+## Installation
 
-Always ensure documentation files contain sufficient content to be meaningful and meet parsing requirements.
+Installation instructions would go here in a real project. This section demonstrates how documentation should be structured for optimal parsing.
+
+## Configuration
+
+Configuration details and examples would be documented here, showing various options and their effects on system behavior.
