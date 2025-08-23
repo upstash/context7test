@@ -1,44 +1,66 @@
-# Version 1.0 Documentation
+# Version Test Repository
 
-This is version 1.0 with simpler documentation.
+This is the main branch with comprehensive documentation for testing the version management features of Context7. This repository demonstrates how the system handles multiple versions and tags.
 
-## Main Features
+## Main Branch Features
+
+The main branch contains the latest development version with all current features and improvements. This branch serves as the primary development line for the project.
+
+### Core Functionality
+
+The main branch includes:
+- Complete feature set
+- Latest improvements
+- Development documentation
+- Testing utilities
+
+## Implementation Details
+
+### JavaScript Module
 
 ```javascript
-// Version 1.0 implementation
-function v1Function() {
-  return "Version 1.0";
+// Main branch feature implementation with full functionality
+function mainBranchFunction(options = {}) {
+  const defaults = {
+    version: 'main',
+    environment: 'development',
+    features: ['core', 'advanced', 'experimental'],
+    debug: true
+  };
+  
+  const config = { ...defaults, ...options };
+  
+  // Process based on configuration
+  console.log('Executing main branch function with config:', config);
+  
+  // Main branch specific logic
+  const result = {
+    status: 'success',
+    branch: 'main',
+    timestamp: new Date().toISOString(),
+    config: config,
+    data: processMainBranchData(config)
+  };
+  
+  return result;
 }
-```
 
-## Configuration
-
-```javascript
-// Configuration for v1
-const config = {
-  version: "1.0.0",
-  features: ["basic", "simple"],
-  environment: "production"
-};
-
-export default config;
-```
-
-## API Example
-
-```javascript
-// Simple API endpoint
-async function getVersion() {
+function processMainBranchData(config) {
+  // Complex processing logic for main branch
   return {
-    version: "1.0.0",
-    status: "stable",
-    releaseDate: "2024-01-01"
+    processed: true,
+    features: config.features,
+    version: config.version
   };
 }
+
+module.exports = { mainBranchFunction, processMainBranchData };
 ```
 
-## Installation
+## Development Guidelines
 
-```bash
-npm install my-package@1.0.0
-```
+When working on the main branch, ensure all tests pass and documentation is updated.
+
+## Version History
+
+This is the active development branch containing all the latest features and improvements.
