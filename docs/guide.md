@@ -1,105 +1,68 @@
-# Main Branch Guide
+# Guide
 
-This is the main branch documentation providing comprehensive guidance for developers working with the latest version of the system.
-
-## Table of Contents
-
-1. [Overview](#overview)
-2. [Getting Started](#getting-started)
-3. [Advanced Features](#advanced-features)
-4. [API Reference](#api-reference)
-5. [Troubleshooting](#troubleshooting)
+This documentation should be included because the 'docs' folder is not in the exclude list. This guide provides comprehensive information about the system.
 
 ## Overview
 
-The main branch represents the cutting-edge version of our system with all the latest features, improvements, and experimental capabilities.
+The documentation in this folder represents important content that should be parsed and included in the Context7 output. This validates that:
 
-## Getting Started
+1. Non-excluded directories are properly included
+2. Documentation folders are processed correctly
+3. Content meets minimum size requirements
+4. Multiple file types are supported
 
-### Prerequisites
+## Configuration Example
 
-- Python 3.8 or higher
-- Node.js 16 or higher
-- Git for version control
-- Development environment setup
+Here's how to configure the system to include specific documentation:
 
-### Installation
+```javascript
+// This configuration should be included in the parsed output
+const includedConfig = {
+  feature: "included",
+  directory: "docs",
+  shouldParse: true,
+  minimumSize: 500,
+  settings: {
+    processMarkdown: true,
+    extractCodeBlocks: true,
+    includeInSearch: true,
+    priority: 'high'
+  }
+};
 
-Follow these steps to set up the main branch:
+// Function to validate included content
+function validateIncludedContent(content) {
+  if (!content || content.length < includedConfig.minimumSize) {
+    console.warn('Content does not meet minimum size requirements');
+    return false;
+  }
+  
+  console.log('Content validated and included');
+  return true;
+}
 
-1. Clone the repository
-2. Install dependencies
-3. Configure environment
-4. Run tests
+// Process documentation files
+function processDocumentation(filePath, content) {
+  const result = {
+    path: filePath,
+    included: true,
+    size: content.length,
+    timestamp: new Date().toISOString(),
+    config: includedConfig
+  };
+  
+  if (validateIncludedContent(content)) {
+    result.status = 'processed';
+  } else {
+    result.status = 'skipped';
+  }
+  
+  return result;
+}
 
-## Advanced Features
-
-### Python Implementation
-
-```python
-# Main branch Python implementation with advanced features
-import json
-import logging
-from datetime import datetime
-from typing import Dict, List, Optional, Any
-
-class MainBranchProcessor:
-    """Main branch data processor with advanced capabilities."""
-    
-    def __init__(self, config: Optional[Dict[str, Any]] = None):
-        self.config = config or {}
-        self.logger = logging.getLogger(__name__)
-        self.version = 'main'
-        self.features = ['core', 'advanced', 'experimental']
-    
-    def main_branch_function(self, data: Optional[Dict] = None) -> Dict:
-        """
-        Process data using main branch logic.
-        
-        Args:
-            data: Input data to process
-        
-        Returns:
-            Processed result dictionary
-        """
-        self.logger.info(f"Processing with main branch version: {self.version}")
-        
-        result = {
-            'status': 'success',
-            'branch': 'main',
-            'timestamp': datetime.now().isoformat(),
-            'version': self.version,
-            'features': self.features,
-            'data': self._process_data(data)
-        }
-        
-        return result
-    
-    def _process_data(self, data: Optional[Dict]) -> Dict:
-        """Internal data processing method."""
-        if not data:
-            return {'message': 'No data provided'}
-        
-        # Advanced processing logic
-        processed = {
-            'original': data,
-            'processed': True,
-            'transformations': ['validated', 'normalized', 'enhanced']
-        }
-        
-        return processed
-
-# Usage example
-if __name__ == "__main__":
-    processor = MainBranchProcessor()
-    result = processor.main_branch_function({'test': 'data'})
-    print(json.dumps(result, indent=2))
+module.exports = { includedConfig, validateIncludedContent, processDocumentation };
 ```
 
-## API Reference
+## Best Practices
 
-Detailed API documentation for main branch features.
-
-## Troubleshooting
-
-Common issues and solutions for main branch development.
+Always ensure documentation files contain sufficient content to be meaningful and meet parsing requirements.
