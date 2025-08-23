@@ -1,66 +1,60 @@
-# Version Test Repository
+# Exclude Folders Test
 
-This is the main branch with comprehensive documentation for testing the version management features of Context7. This repository demonstrates how the system handles multiple versions and tags.
+This repository tests the exclude folders functionality of Context7. This file should be included in the parsed output because it's in the root directory.
 
-## Main Branch Features
+## Purpose
 
-The main branch contains the latest development version with all current features and improvements. This branch serves as the primary development line for the project.
+This test validates that the Context7 parser correctly excludes specified directories while including all other content. The exclude folders feature is essential for:
 
-### Core Functionality
+- Ignoring test directories
+- Skipping example code that shouldn't be in documentation
+- Excluding build artifacts
+- Omitting temporary or cache directories
 
-The main branch includes:
-- Complete feature set
-- Latest improvements
-- Development documentation
-- Testing utilities
+## Included Content
 
-## Implementation Details
+This README file and other root-level documentation should always be included in the parsing results.
 
-### JavaScript Module
+### JavaScript Implementation
 
 ```javascript
-// Main branch feature implementation with full functionality
-function mainBranchFunction(options = {}) {
+// This function should be included in the parsed output
+function includedFunction(options = {}) {
   const defaults = {
-    version: 'main',
-    environment: 'development',
-    features: ['core', 'advanced', 'experimental'],
-    debug: true
+    includeInDocs: true,
+    importance: 'high',
+    category: 'core'
   };
   
   const config = { ...defaults, ...options };
   
-  // Process based on configuration
-  console.log('Executing main branch function with config:', config);
+  console.log('This function is in the root directory and should be included');
+  console.log('Configuration:', config);
   
-  // Main branch specific logic
-  const result = {
-    status: 'success',
-    branch: 'main',
+  return {
+    status: 'included',
+    location: 'root',
     timestamp: new Date().toISOString(),
-    config: config,
-    data: processMainBranchData(config)
+    config: config
   };
-  
-  return result;
 }
 
-function processMainBranchData(config) {
-  // Complex processing logic for main branch
+// Additional included functionality
+function processIncludedData(data) {
+  if (!data || typeof data !== 'object') {
+    throw new Error('Invalid data provided');
+  }
+  
   return {
     processed: true,
-    features: config.features,
-    version: config.version
+    included: true,
+    data: data
   };
 }
 
-module.exports = { mainBranchFunction, processMainBranchData };
+module.exports = { includedFunction, processIncludedData };
 ```
 
-## Development Guidelines
+## Documentation Standards
 
-When working on the main branch, ensure all tests pass and documentation is updated.
-
-## Version History
-
-This is the active development branch containing all the latest features and improvements.
+All included files should meet the minimum content requirements and provide meaningful documentation.
