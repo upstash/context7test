@@ -1,60 +1,50 @@
-# Exclude Folders Test
+# Test Repository
 
-This repository tests the exclude folders functionality of Context7. This file should be included in the parsed output because it's in the root directory.
+This is a test repository for Context7 parsing. This repository contains comprehensive documentation and code examples designed to test the parsing capabilities of the Context7 system.
 
-## Purpose
+## Overview
 
-This test validates that the Context7 parser correctly excludes specified directories while including all other content. The exclude folders feature is essential for:
+The Context7 parser is designed to extract meaningful content from repository documentation and code files. This test repository helps ensure that the parser correctly handles various types of content including markdown documentation, code snippets, and structured data.
 
-- Ignoring test directories
-- Skipping example code that shouldn't be in documentation
-- Excluding build artifacts
-- Omitting temporary or cache directories
+## Features
 
-## Included Content
+- **Documentation Parsing**: Extracts content from markdown files
+- **Code Snippet Detection**: Identifies and processes code blocks
+- **Multi-language Support**: Handles JavaScript, Python, and other languages
+- **Structured Data**: Processes API references and technical documentation
 
-This README file and other root-level documentation should always be included in the parsing results.
+## Code Examples
 
-### JavaScript Implementation
+### JavaScript Example
 
 ```javascript
-// This function should be included in the parsed output
-function includedFunction(options = {}) {
-  const defaults = {
-    includeInDocs: true,
-    importance: 'high',
-    category: 'core'
-  };
-  
-  const config = { ...defaults, ...options };
-  
-  console.log('This function is in the root directory and should be included');
-  console.log('Configuration:', config);
-  
-  return {
-    status: 'included',
-    location: 'root',
-    timestamp: new Date().toISOString(),
-    config: config
-  };
-}
-
-// Additional included functionality
-function processIncludedData(data) {
-  if (!data || typeof data !== 'object') {
-    throw new Error('Invalid data provided');
+// Example function with comprehensive documentation
+function testFunction(input) {
+  // Validate input parameters
+  if (!input || typeof input !== 'string') {
+    throw new Error('Invalid input: must be a non-empty string');
   }
   
-  return {
-    processed: true,
-    included: true,
-    data: data
-  };
+  // Process the input and return result
+  const processed = input.trim().toLowerCase();
+  console.log('Processing:', processed);
+  return `Hello World: ${processed}`;
 }
 
-module.exports = { includedFunction, processIncludedData };
+// Export for module usage
+module.exports = { testFunction };
 ```
 
-## Documentation Standards
+### Usage
 
-All included files should meet the minimum content requirements and provide meaningful documentation.
+To use this function in your project:
+
+```javascript
+const { testFunction } = require('./test');
+const result = testFunction('Example Input');
+console.log(result); // Output: Hello World: example input
+```
+
+## Contributing
+
+This is a test repository maintained for automated testing purposes. Please do not submit pull requests or issues to this repository.
