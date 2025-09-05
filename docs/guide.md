@@ -1,68 +1,83 @@
-# Guide
+# Initial Guide
 
-This documentation should be included because the 'docs' folder is not in the exclude list. This guide provides comprehensive information about the system.
+This is the initial guide for the Context7 test repository. This comprehensive guide provides detailed information about the system's capabilities and usage patterns.
 
-## Overview
+## Table of Contents
 
-The documentation in this folder represents important content that should be parsed and included in the Context7 output. This validates that:
+1. [Introduction](#introduction)
+2. [Getting Started](#getting-started)
+3. [Core Concepts](#core-concepts)
+4. [API Reference](#api-reference)
+5. [Best Practices](#best-practices)
 
-1. Non-excluded directories are properly included
-2. Documentation folders are processed correctly
-3. Content meets minimum size requirements
-4. Multiple file types are supported
+## Introduction
 
-## Configuration Example
+The Context7 parser is a sophisticated system for extracting and processing documentation from various sources. This guide covers the fundamental concepts and usage patterns.
 
-Here's how to configure the system to include specific documentation:
+## Getting Started
 
-```javascript
-// This configuration should be included in the parsed output
-const includedConfig = {
-  feature: "included",
-  directory: "docs",
-  shouldParse: true,
-  minimumSize: 500,
-  settings: {
-    processMarkdown: true,
-    extractCodeBlocks: true,
-    includeInSearch: true,
-    priority: 'high'
-  }
-};
+### Prerequisites
 
-// Function to validate included content
-function validateIncludedContent(content) {
-  if (!content || content.length < includedConfig.minimumSize) {
-    console.warn('Content does not meet minimum size requirements');
-    return false;
-  }
-  
-  console.log('Content validated and included');
-  return true;
-}
+Before beginning, ensure you have:
+- Python 3.7 or higher
+- Node.js 14 or higher
+- Git for version control
+- A text editor or IDE
 
-// Process documentation files
-function processDocumentation(filePath, content) {
-  const result = {
-    path: filePath,
-    included: true,
-    size: content.length,
-    timestamp: new Date().toISOString(),
-    config: includedConfig
-  };
-  
-  if (validateIncludedContent(content)) {
-    result.status = 'processed';
-  } else {
-    result.status = 'skipped';
-  }
-  
-  return result;
-}
+### Installation
 
-module.exports = { includedConfig, validateIncludedContent, processDocumentation };
+Follow these steps to set up the system:
+
+1. Clone the repository
+2. Install dependencies
+3. Configure environment variables
+4. Run initial setup
+
+## Core Concepts
+
+### Python Implementation
+
+```python
+# Initial Python implementation with error handling
+def initial_function(data=None):
+    """
+    Process initial data with validation.
+    
+    Args:
+        data: Input data to process (optional)
+    
+    Returns:
+        dict: Processed result with status information
+    
+    Raises:
+        ValueError: If data is invalid
+    """
+    import json
+    from datetime import datetime
+    
+    # Validate input
+    if data is not None and not isinstance(data, (dict, list)):
+        raise ValueError("Data must be a dictionary or list")
+    
+    # Process the data
+    result = {
+        'status': 'initial',
+        'timestamp': datetime.now().isoformat(),
+        'data': data,
+        'version': '1.0.0'
+    }
+    
+    # Log the operation
+    print(f"Processing initial state: {json.dumps(result, indent=2)}")
+    
+    return result
+
+# Additional helper functions
+def validate_input(data):
+    """Validate input data format."""
+    return isinstance(data, (dict, list)) and len(str(data)) > 0
 ```
 
 ## Best Practices
 
-Always ensure documentation files contain sufficient content to be meaningful and meet parsing requirements.
+Always validate input data and handle errors appropriately.

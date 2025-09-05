@@ -1,60 +1,50 @@
-# Exclude Folders Test
+# Test Repository for Refresh
 
-This repository tests the exclude folders functionality of Context7. This file should be included in the parsed output because it's in the root directory.
+This is the initial state before refresh. This repository is designed to test the refresh functionality of the Context7 parser system. The refresh feature allows updating existing project documentation when the source repository changes.
 
-## Purpose
+## Initial Features
 
-This test validates that the Context7 parser correctly excludes specified directories while including all other content. The exclude folders feature is essential for:
+This version includes basic functionality for testing the parser's ability to detect and process documentation updates.
 
-- Ignoring test directories
-- Skipping example code that shouldn't be in documentation
-- Excluding build artifacts
-- Omitting temporary or cache directories
+### Core Functionality
 
-## Included Content
+The system provides essential features for documentation parsing:
+- Markdown file processing
+- Code snippet extraction
+- Multi-language support
+- Version tracking
 
-This README file and other root-level documentation should always be included in the parsing results.
+## Code Examples
 
 ### JavaScript Implementation
 
 ```javascript
-// This function should be included in the parsed output
-function includedFunction(options = {}) {
-  const defaults = {
-    includeInDocs: true,
-    importance: 'high',
-    category: 'core'
-  };
-  
-  const config = { ...defaults, ...options };
-  
-  console.log('This function is in the root directory and should be included');
-  console.log('Configuration:', config);
-  
-  return {
-    status: 'included',
-    location: 'root',
-    timestamp: new Date().toISOString(),
-    config: config
-  };
-}
-
-// Additional included functionality
-function processIncludedData(data) {
+// Initial implementation with basic functionality
+function initialFunction(data) {
+  // Validate input data
   if (!data || typeof data !== 'object') {
     throw new Error('Invalid data provided');
   }
   
-  return {
-    processed: true,
-    included: true,
+  // Process the data
+  const result = {
+    status: 'initial',
+    timestamp: new Date().toISOString(),
     data: data
   };
+  
+  console.log('Processing initial state:', result);
+  return result;
 }
 
-module.exports = { includedFunction, processIncludedData };
+// Helper function for data validation
+function validateData(input) {
+  return input && typeof input === 'object' && Object.keys(input).length > 0;
+}
+
+module.exports = { initialFunction, validateData };
 ```
 
-## Documentation Standards
+## Documentation Status
 
-All included files should meet the minimum content requirements and provide meaningful documentation.
+This is the initial version of the documentation before any refresh operations.
