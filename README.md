@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** gmw4e75mzej-mf8t189n
+**Document ID:** yvvdhrsuli-mf8tf42k
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,14 +21,16 @@ echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
-## R: Vector Arithmetic
+## Dart: Map Over List
 
-Simple R vector example computing squares of a sequence.
+Dart example mapping over a list and printing the result.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
 ```
 
 
