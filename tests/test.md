@@ -2,20 +2,22 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** gziwlipn3er-mf89vjqu
+**Document ID:** 8y7enqcq5ws-mf89w91l
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages.
 
 Each example includes a short description followed by a fenced code block.
 
-## PHP: JSON Response
+## Dart: Map Over List
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+Dart example mapping over a list and printing the result.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
 ```
 
 
