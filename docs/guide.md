@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** m5ob3ur51rr-mf8uz7k1
+**Document ID:** 8znxr4ex08x-mf8uz7k5
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,18 +10,31 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Python: Fibonacci Generator
+## C#: LINQ Query
 
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
+```
 
-print(list(fib(10)))
+
+## Elixir: Enum Pipeline
+
+Elixir pipeline that filters even numbers and inspects the result.
+
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
@@ -34,17 +47,6 @@ text = "to be or not to be"
 counts = Hash.new(0)
 text.split.each { |w| counts[w] += 1 }
 puts counts
-```
-
-
-## Julia: Comprehension
-
-Julia list comprehension generating cubes of a range.
-
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
 ```
 
 
