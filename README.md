@@ -2,47 +2,41 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 28zbbm1fd3v-mf89tzdx
+**Document ID:** n1mc7kwiuns-mf89udqu
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages.
 
 Each example includes a short description followed by a fenced code block.
 
-## Python: Fibonacci Generator
+## C#: LINQ Query
 
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(10)))
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
 ```
 
 
-## Ruby: Word Count
+## Rust: Read Lines
 
-Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```ruby
-text = "to be or not to be"
-counts = Hash.new(0)
-text.split.each { |w| counts[w] += 1 }
-puts counts
-```
-
-
-## Swift: Map and Filter
-
-Demonstrates Swift's map and filter on arrays for concise transformation.
-
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
+}
 ```
 
 

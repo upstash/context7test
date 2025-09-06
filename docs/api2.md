@@ -2,19 +2,22 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** neu8tj3oa8l-mf89udqx
+**Document ID:** 55euuq240yq-mf89udqx
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages.
 
 Each example includes a short description followed by a fenced code block.
 
-## Bash: Count Files
+## Dart: Map Over List
 
-Counts files in the current directory using common shell tools.
+Dart example mapping over a list and printing the result.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
 ```
 
 

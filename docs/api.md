@@ -2,37 +2,25 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** bbcimwd6r2b-mf89tze1
+**Document ID:** v29tp05ioi8-mf89udqx
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages.
 
 Each example includes a short description followed by a fenced code block.
 
-## Dart: Map Over List
+## C#: LINQ Query
 
-Dart example mapping over a list and printing the result.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
-}
-```
-
-
-## C++: Transform Vector
-
-C++ transforms a vector in-place and prints the results.
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-  vector<int> v{1,2,3,4,5};
-  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
-  for (auto n: v) cout<<n<<" ";
-  return 0;
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
 }
 ```
 
