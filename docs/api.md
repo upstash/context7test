@@ -1,90 +1,91 @@
-# Main Branch API Documentation
+# API Reference
 
-Comprehensive API documentation for the main branch version, including all endpoints, authentication methods, and response formats.
+This document provides a comprehensive reference for all available API endpoints in the Context7 system. Each endpoint is documented with its purpose, parameters, request/response formats, and example usage.
 
-## API Configuration
+## Base Configuration
 
-### Base Configuration
+All API requests should be made to the base URL with appropriate authentication headers.
 
 ```javascript
-const mainApi = {
-  version: "main",
-  baseUrl: "https://api.main.context7.test",
-  endpoints: [
-    "api/v1/main",
-    "api/v1/features",
-    "api/v1/experimental"
-  ],
-  authentication: {
-    type: "bearer",
-    header: "Authorization"
-  },
-  rateLimit: {
-    requests: 1000,
-    window: 60000
-  },
-  timeout: 30000
+const apiConfig = {
+  baseUrl: "https://api.example.com",
+  version: "v1",
+  timeout: 30000,
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer YOUR_API_TOKEN'
+  }
 };
-
-// API Client for main branch
-class MainBranchApiClient {
-  constructor(config = mainApi) {
-    this.config = { ...mainApi, ...config };
-    this.requestCount = 0;
-    this.lastRequestTime = null;
-  }
-  
-  async request(endpoint, options = {}) {
-    const url = `${this.config.baseUrl}/${endpoint}`;
-    
-    // Add authentication
-    const headers = {
-      ...options.headers,
-      [this.config.authentication.header]: `Bearer ${options.token || 'default-token'}`
-    };
-    
-    // Track request for rate limiting
-    this.requestCount++;
-    this.lastRequestTime = new Date();
-    
-    console.log(`Main branch API request #${this.requestCount} to ${url}`);
-    
-    // Simulate request with response
-    return {
-      status: 200,
-      data: {
-        endpoint,
-        version: this.config.version,
-        timestamp: this.lastRequestTime.toISOString()
-      }
-    };
-  }
-  
-  // Get all available features
-  async getFeatures() {
-    return this.request('api/v1/features');
-  }
-  
-  // Access experimental endpoints
-  async getExperimental(feature) {
-    return this.request(`api/v1/experimental/${feature}`);
-  }
-}
-
-module.exports = { mainApi, MainBranchApiClient };
 ```
 
-## Available Endpoints
+## Authentication
 
-### GET /api/v1/main
-Returns main branch status and metadata.
+All API endpoints require authentication using Bearer tokens. Include your API token in the Authorization header of each request.
 
-### GET /api/v1/features
-Lists all available features in the main branch.
+## Endpoints
 
-### GET /api/v1/experimental/:feature
-Access experimental features available only in main branch.
+### GET /api/v1/test
 
-## Response Format
+Test endpoint to verify API connectivity and authentication.
 
-All responses follow a consistent JSON structure with appropriate status codes.
+**Request:**
+```http
+GET /api/v1/test HTTP/1.1
+Host: api.example.com
+Authorization: Bearer YOUR_API_TOKEN
+```
+
+**Response:**
+```json
+{
+  "status": "success",
+  "message": "API is operational",
+  "timestamp": "2024-01-01T00:00:00Z",
+  "version": "1.0.0"
+}
+```
+
+### POST /api/v1/data
+
+Submit data for processing by the Context7 system.
+
+**Request:**
+```http
+POST /api/v1/data HTTP/1.1
+Host: api.example.com
+Authorization: Bearer YOUR_API_TOKEN
+Content-Type: application/json
+
+{
+  "type": "document",
+  "content": "Your content here",
+  "metadata": {
+    "source": "test",
+    "timestamp": "2024-01-01T00:00:00Z"
+  }
+}
+```
+
+**Response:**
+```json
+{
+  "status": "success",
+  "id": "doc_123456",
+  "message": "Data received and queued for processing",
+  "estimatedProcessingTime": 120
+}
+```
+
+## Error Handling
+
+The API uses standard HTTP status codes to indicate the success or failure of requests. Common error responses include:
+
+- **400 Bad Request**: Invalid request parameters
+- **401 Unauthorized**: Missing or invalid authentication token
+- **404 Not Found**: Requested resource does not exist
+- **429 Too Many Requests**: Rate limit exceeded
+- **500 Internal Server Error**: Server-side error occurred
+
+## Rate Limiting
+
+API requests are limited to 100 requests per minute per API token. Rate limit information is included in response headers.
