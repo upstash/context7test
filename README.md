@@ -2,39 +2,38 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 5jyu50vn3zx-mf8oxkxj
+**Document ID:** euqruduw1pk-mf8ozwe5
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages.
 
 Each example includes a short description followed by a fenced code block.
 
-## Python: Fibonacci Generator
+## Kotlin: Data Class Copy
 
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
 
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(10)))
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
+}
 ```
 
 
-## Bash: Count Files
+## Scala: List Pipeline
 
-Counts files in the current directory using common shell tools.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
+}
 ```
 
 
-
-
-## Updated Content
-
-This content was added for the refresh test.
