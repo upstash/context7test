@@ -2,47 +2,51 @@
 
 This file is generated for E2E parsing.
 
-**Doc ID:** smxcsz37b6-mf88v6z1
+**Document ID:** uqm5s2qvbb7-mf89t9ke
 
-In programming, a loop is a control structure that repeatedly executes a block of code while a condition holds or for a fixed range.
+This document contains a variety of concise, self-contained code examples across multiple programming languages.
 
-Common loop forms include for and while; in these examples, we iterate from 0 up to a target number and print each value.
+Each example includes a short description followed by a fenced code block.
 
-**Language chosen for all examples:** python
+## JavaScript: Sum Array Elements
 
-## Example Code 1
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-This code prints the integers from 0 to 1.
-
-```python
-def write_zero_to_n(n):
-    for x in range(n + 1):
-        print(x)
-
-write_zero_to_n(1)
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
-## Example Code 2
 
-This code prints the integers from 0 to 2.
+## Go: HTTP Server
 
-```python
-def write_zero_to_n(n):
-    for x in range(n + 1):
-        print(x)
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-write_zero_to_n(2)
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
+}
 ```
 
-## Example Code 3
 
-This code prints the integers from 0 to 3.
+## SQL: Group and Order
 
-```python
-def write_zero_to_n(n):
-    for x in range(n + 1):
-        print(x)
+SQL query that groups by name and orders by count descending.
 
-write_zero_to_n(3)
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
+
 

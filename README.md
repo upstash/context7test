@@ -2,62 +2,45 @@
 
 This file is generated for E2E parsing.
 
-**Doc ID:** n6l5dvl6xi-mf88v6yy
+**Document ID:** hjvgk91342m-mf89t9ka
 
-In programming, a loop is a control structure that repeatedly executes a block of code while a condition holds or for a fixed range.
+This document contains a variety of concise, self-contained code examples across multiple programming languages.
 
-Common loop forms include for and while; in these examples, we iterate from 0 up to a target number and print each value.
+Each example includes a short description followed by a fenced code block.
 
-**Language chosen for all examples:** go
+## Swift: Map and Filter
 
-## Example Code 1
+Demonstrates Swift's map and filter on arrays for concise transformation.
 
-This code prints the integers from 0 to 1.
+```swift
+let nums = [1,2,3,4,5]
+let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
+print(evensDoubled)
+```
 
-```go
-package main
 
-import "fmt"
+## Dart: Map Over List
 
-func main(){
-    n := 1
-    for x := 0; x <= n; x++ {
-        fmt.Println(x)
-    }
+Dart example mapping over a list and printing the result.
+
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
 }
 ```
 
-## Example Code 2
 
-This code prints the integers from 0 to 2.
+## Ruby: Word Count
 
-```go
-package main
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-import "fmt"
-
-func main(){
-    n := 2
-    for x := 0; x <= n; x++ {
-        fmt.Println(x)
-    }
-}
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
-## Example Code 3
-
-This code prints the integers from 0 to 3.
-
-```go
-package main
-
-import "fmt"
-
-func main(){
-    n := 3
-    for x := 0; x <= n; x++ {
-        fmt.Println(x)
-    }
-}
-```
 

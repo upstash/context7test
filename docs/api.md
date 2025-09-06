@@ -2,35 +2,33 @@
 
 This file is generated for E2E parsing.
 
-**Doc ID:** onrmcjwxim-mf88v6z1
+**Document ID:** 8tsk19faaxr-mf89t9ke
 
-In programming, a loop is a control structure that repeatedly executes a block of code while a condition holds or for a fixed range.
+This document contains a variety of concise, self-contained code examples across multiple programming languages.
 
-Common loop forms include for and while; in these examples, we iterate from 0 up to a target number and print each value.
+Each example includes a short description followed by a fenced code block.
 
-**Language chosen for all examples:** python
+## Dart: Map Over List
 
-## Example Code 1
+Dart example mapping over a list and printing the result.
 
-This code prints the integers from 0 to 1.
-
-```python
-def write_zero_to_n(n):
-    for x in range(n + 1):
-        print(x)
-
-write_zero_to_n(1)
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
 ```
 
-## Example Code 2
 
-This code prints the integers from 0 to 2.
+## TypeScript: Typed User Model
 
-```python
-def write_zero_to_n(n):
-    for x in range(n + 1):
-        print(x)
+This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
 
-write_zero_to_n(2)
+```typescript
+interface User { id: number; name: string; active: boolean }
+function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
+console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
+
 
