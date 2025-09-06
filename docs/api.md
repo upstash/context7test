@@ -74,6 +74,23 @@ class MainBranchApiClient {
 module.exports = { mainApi, MainBranchApiClient };
 ```
 
+## Examples
+
+```javascript
+// Additional example 1
+function exampleOne(input) {
+  return { ok: true, input };
+}
+module.exports = { exampleOne };
+```
+
+```typescript
+// Additional example 2
+export function exampleTwo(value: number): number {
+  return value + 2;
+}
+```
+
 ## Available Endpoints
 
 ### GET /api/v1/main
