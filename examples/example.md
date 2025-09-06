@@ -2,20 +2,21 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** bvp3jgeyuww-mf8osoab
+**Document ID:** fr4v2fkw9bn-mf8otf07
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages.
 
 Each example includes a short description followed by a fenced code block.
 
-## Elixir: Enum Pipeline
+## SQL: Group and Order
 
-Elixir pipeline that filters even numbers and inspects the result.
+SQL query that groups by name and orders by count descending.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 

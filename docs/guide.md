@@ -2,34 +2,25 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** y6q2l6z1u9-mf8osoab
+**Document ID:** 62qfa8t6576-mf8otf07
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages.
 
 Each example includes a short description followed by a fenced code block.
 
-## Kotlin: Data Class Copy
+## C++: Transform Vector
 
-Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
+C++ transforms a vector in-place and prints the results.
 
-```kotlin
-data class User(val id:Int, val name:String, val active:Boolean)
-fun main(){
-  val u1 = User(1, "Ada", true)
-  val u2 = u1.copy(active = false)
-  println(u2)
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
 }
-```
-
-
-## Elixir: Enum Pipeline
-
-Elixir pipeline that filters even numbers and inspects the result.
-
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
 ```
 
 

@@ -2,22 +2,11 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** u320ipb6mso-mf8osoaa
+**Document ID:** cfrhdgigrgi-mf8otf06
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages.
 
 Each example includes a short description followed by a fenced code block.
-
-## Elixir: Enum Pipeline
-
-Elixir pipeline that filters even numbers and inspects the result.
-
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
-```
-
 
 ## C++: Transform Vector
 
