@@ -2,38 +2,44 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 5d9bwubfcti-mf8oso6l
+**Document ID:** kc96rl94pcn-mf8oso89
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages.
 
 Each example includes a short description followed by a fenced code block.
 
-## Ruby: Word Count
+## Dart: Map Over List
 
-Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
+Dart example mapping over a list and printing the result.
 
-```ruby
-text = "to be or not to be"
-counts = Hash.new(0)
-text.split.each { |w| counts[w] += 1 }
-puts counts
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
 ```
 
 
-## C#: LINQ Query
+## JavaScript: Sum Array Elements
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
-}
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
+```
+
+
+## PHP: JSON Response
+
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
