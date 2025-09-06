@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 8tsk19faaxr-mf89t9ke
+**Document ID:** bbcimwd6r2b-mf89tze1
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages.
 
@@ -21,14 +21,19 @@ void main() {
 ```
 
 
-## TypeScript: Typed User Model
+## C++: Transform Vector
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+C++ transforms a vector in-place and prints the results.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
+}
 ```
 
 

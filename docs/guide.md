@@ -2,39 +2,19 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** uqm5s2qvbb7-mf89t9ke
+**Document ID:** dubcm0e9hpa-mf89tze1
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages.
 
 Each example includes a short description followed by a fenced code block.
 
-## JavaScript: Sum Array Elements
+## Bash: Count Files
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+Counts files in the current directory using common shell tools.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
-```
-
-
-## Go: HTTP Server
-
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
-
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
-}
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
@@ -47,6 +27,26 @@ SELECT name, COUNT(*) AS c
 FROM users
 GROUP BY name
 ORDER BY c DESC;
+```
+
+
+## Java: Stream Map/Filter
+
+Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
+
+```java
+import java.util.*;
+import java.util.stream.*;
+class Main {
+  public static void main(String[] args) {
+    List<Integer> nums = Arrays.asList(1,2,3,4,5);
+    List<Integer> doubledEvens = nums.stream()
+      .filter(n -> n % 2 == 0)
+      .map(n -> n * 2)
+      .collect(Collectors.toList());
+    System.out.println(doubledEvens);
+  }
+}
 ```
 
 
