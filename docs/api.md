@@ -1,75 +1,90 @@
-# Initial API Documentation
+# Main Branch API Documentation
 
-This document provides comprehensive API documentation for the Context7 test system. All endpoints and methods are documented with examples and expected responses.
+Comprehensive API documentation for the main branch version, including all endpoints, authentication methods, and response formats.
 
 ## API Configuration
 
-The API is configured with the following base settings:
+### Base Configuration
 
 ```javascript
-const initialApi = {
-  version: "1.0.0",
-  baseUrl: "https://api.context7.test",
-  timeout: 30000,
-  retryAttempts: 3,
-  headers: {
-    'Content-Type': 'application/json',
-    'Accept': 'application/json',
-    'X-API-Version': '1.0.0'
-  }
+const mainApi = {
+  version: "main",
+  baseUrl: "https://api.main.context7.test",
+  endpoints: [
+    "api/v1/main",
+    "api/v1/features",
+    "api/v1/experimental"
+  ],
+  authentication: {
+    type: "bearer",
+    header: "Authorization"
+  },
+  rateLimit: {
+    requests: 1000,
+    window: 60000
+  },
+  timeout: 30000
 };
 
-// API client initialization
-class ApiClient {
-  constructor(config = initialApi) {
-    this.config = { ...initialApi, ...config };
+// API Client for main branch
+class MainBranchApiClient {
+  constructor(config = mainApi) {
+    this.config = { ...mainApi, ...config };
     this.requestCount = 0;
+    this.lastRequestTime = null;
   }
   
-  async makeRequest(endpoint, options = {}) {
-    const url = `${this.config.baseUrl}${endpoint}`;
-    const requestOptions = {
-      ...options,
-      headers: { ...this.config.headers, ...options.headers },
-      timeout: this.config.timeout
+  async request(endpoint, options = {}) {
+    const url = `${this.config.baseUrl}/${endpoint}`;
+    
+    // Add authentication
+    const headers = {
+      ...options.headers,
+      [this.config.authentication.header]: `Bearer ${options.token || 'default-token'}`
     };
     
+    // Track request for rate limiting
     this.requestCount++;
-    console.log(`Making request #${this.requestCount} to ${url}`);
+    this.lastRequestTime = new Date();
     
-    // Simulate request with retry logic
-    for (let attempt = 1; attempt <= this.config.retryAttempts; attempt++) {
-      try {
-        // Request implementation would go here
-        return { success: true, attempt, data: {} };
-      } catch (error) {
-        if (attempt === this.config.retryAttempts) {
-          throw error;
-        }
-        await this.delay(1000 * attempt);
+    console.log(`Main branch API request #${this.requestCount} to ${url}`);
+    
+    // Simulate request with response
+    return {
+      status: 200,
+      data: {
+        endpoint,
+        version: this.config.version,
+        timestamp: this.lastRequestTime.toISOString()
       }
-    }
+    };
   }
   
-  delay(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+  // Get all available features
+  async getFeatures() {
+    return this.request('api/v1/features');
+  }
+  
+  // Access experimental endpoints
+  async getExperimental(feature) {
+    return this.request(`api/v1/experimental/${feature}`);
   }
 }
 
-module.exports = { initialApi, ApiClient };
+module.exports = { mainApi, MainBranchApiClient };
 ```
 
 ## Available Endpoints
 
-### GET /api/v1/status
-Returns the current system status.
+### GET /api/v1/main
+Returns main branch status and metadata.
 
-### POST /api/v1/parse
-Initiates a parsing operation.
+### GET /api/v1/features
+Lists all available features in the main branch.
 
-### GET /api/v1/projects
-Lists all available projects.
+### GET /api/v1/experimental/:feature
+Access experimental features available only in main branch.
 
-## Error Handling
+## Response Format
 
-All API errors follow a consistent format with appropriate HTTP status codes.
+All responses follow a consistent JSON structure with appropriate status codes.

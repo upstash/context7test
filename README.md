@@ -1,61 +1,66 @@
-# Test Repository for Refresh
+# Version Test Repository
 
-This is the initial state before refresh. This repository is designed to test the refresh functionality of the Context7 parser system. The refresh feature allows updating existing project documentation when the source repository changes.
+This is the main branch with comprehensive documentation for testing the version management features of Context7. This repository demonstrates how the system handles multiple versions and tags.
 
-## Initial Features
+## Main Branch Features
 
-This version includes basic functionality for testing the parser's ability to detect and process documentation updates.
+The main branch contains the latest development version with all current features and improvements. This branch serves as the primary development line for the project.
 
 ### Core Functionality
 
-The system provides essential features for documentation parsing:
-- Markdown file processing
-- Code snippet extraction
-- Multi-language support
-- Version tracking
+The main branch includes:
+- Complete feature set
+- Latest improvements
+- Development documentation
+- Testing utilities
 
-## Code Examples
+## Implementation Details
 
-### JavaScript Implementation
+### JavaScript Module
 
 ```javascript
-// Initial implementation with basic functionality
-function initialFunction(data) {
-  // Validate input data
-  if (!data || typeof data !== 'object') {
-    throw new Error('Invalid data provided');
-  }
-  
-  // Process the data
-  const result = {
-    status: 'initial',
-    timestamp: new Date().toISOString(),
-    data: data
+// Main branch feature implementation with full functionality
+function mainBranchFunction(options = {}) {
+  const defaults = {
+    version: 'main',
+    environment: 'development',
+    features: ['core', 'advanced', 'experimental'],
+    debug: true
   };
   
-  console.log('Processing initial state:', result);
+  const config = { ...defaults, ...options };
+  
+  // Process based on configuration
+  console.log('Executing main branch function with config:', config);
+  
+  // Main branch specific logic
+  const result = {
+    status: 'success',
+    branch: 'main',
+    timestamp: new Date().toISOString(),
+    config: config,
+    data: processMainBranchData(config)
+  };
+  
   return result;
 }
 
-// Helper function for data validation
-function validateData(input) {
-  return input && typeof input === 'object' && Object.keys(input).length > 0;
+function processMainBranchData(config) {
+  // Complex processing logic for main branch
+  return {
+    processed: true,
+    features: config.features,
+    version: config.version
+  };
 }
 
-module.exports = { initialFunction, validateData };
+module.exports = { mainBranchFunction, processMainBranchData };
 ```
 
-## Documentation Status
+## Development Guidelines
 
-This is the initial version of the documentation before any refresh operations.
+When working on the main branch, ensure all tests pass and documentation is updated.
 
+## Version History
 
-## Updated Content
-
-This content was added for the refresh test.
-
-```javascript
-function refreshedFunction() {
-  return "This is new content after refresh";
-}
-```
+This is the active development branch containing all the latest features and improvements.
