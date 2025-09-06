@@ -2,36 +2,49 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** y65wyhi34se-mf89vjng
+**Document ID:** af8hecpw18b-mf89vjp6
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages.
 
 Each example includes a short description followed by a fenced code block.
 
-## SQL: Group and Order
+## Ruby: Word Count
 
-SQL query that groups by name and orders by count descending.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
 
-## C++: Transform Vector
+## Rust: Read Lines
 
-C++ transforms a vector in-place and prints the results.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-  vector<int> v{1,2,3,4,5};
-  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
-  for (auto n: v) cout<<n<<" ";
-  return 0;
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
+}
+```
+
+
+## Kotlin: Data Class Copy
+
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
+
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
 }
 ```
 
