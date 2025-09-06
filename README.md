@@ -1,50 +1,51 @@
-# Test Repository
+# Auto-generated Test Document
 
-This is a test repository for Context7 parsing. This repository contains comprehensive documentation and code examples designed to test the parsing capabilities of the Context7 system.
+This file is generated for E2E parsing.
 
-## Overview
+**Doc ID:** myf5sbk6up-mf87j985
 
-The Context7 parser is designed to extract meaningful content from repository documentation and code files. This test repository helps ensure that the parser correctly handles various types of content including markdown documentation, code snippets, and structured data.
+In programming, a loop is a control structure that repeatedly executes a block of code while a condition holds or for a fixed range.
 
-## Features
+Common loop forms include for and while; in these examples, we iterate from 0 up to a target number and print each value.
 
-- **Documentation Parsing**: Extracts content from markdown files
-- **Code Snippet Detection**: Identifies and processes code blocks
-- **Multi-language Support**: Handles JavaScript, Python, and other languages
-- **Structured Data**: Processes API references and technical documentation
+**Language chosen for all examples:** javascript
 
-## Code Examples
+## Example Code 1
 
-### JavaScript Example
+This code prints the integers from 0 to 1.
 
 ```javascript
-// Example function with comprehensive documentation
-function testFunction(input) {
-  // Validate input parameters
-  if (!input || typeof input !== 'string') {
-    throw new Error('Invalid input: must be a non-empty string');
+function writeZeroToN(n) {
+  for (let x = 0; x <= n; x++) {
+    console.log(x);
   }
-  
-  // Process the input and return result
-  const processed = input.trim().toLowerCase();
-  console.log('Processing:', processed);
-  return `Hello World: ${processed}`;
 }
-
-// Export for module usage
-module.exports = { testFunction };
+writeZeroToN(1);
 ```
 
-### Usage
+## Example Code 2
 
-To use this function in your project:
+This code prints the integers from 0 to 2.
 
 ```javascript
-const { testFunction } = require('./test');
-const result = testFunction('Example Input');
-console.log(result); // Output: Hello World: example input
+function writeZeroToN(n) {
+  for (let x = 0; x <= n; x++) {
+    console.log(x);
+  }
+}
+writeZeroToN(2);
 ```
 
-## Contributing
+## Example Code 3
 
-This is a test repository maintained for automated testing purposes. Please do not submit pull requests or issues to this repository.
+This code prints the integers from 0 to 3.
+
+```javascript
+function writeZeroToN(n) {
+  for (let x = 0; x <= n; x++) {
+    console.log(x);
+  }
+}
+writeZeroToN(3);
+```
+
