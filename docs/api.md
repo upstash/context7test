@@ -2,37 +2,45 @@
 
 This file is generated for E2E parsing.
 
-**Doc ID:** okt1tj7n0xi-mf8842t1
+**Doc ID:** 0k9trp0r4xy-mf88ne19
 
 In programming, a loop is a control structure that repeatedly executes a block of code while a condition holds or for a fixed range.
 
 Common loop forms include for and while; in these examples, we iterate from 0 up to a target number and print each value.
 
-**Language chosen for all examples:** javascript
+**Language chosen for all examples:** go
 
 ## Example Code 1
 
 This code prints the integers from 0 to 1.
 
-```javascript
-function writeZeroToN(n) {
-  for (let x = 0; x <= n; x++) {
-    console.log(x);
-  }
+```go
+package main
+
+import "fmt"
+
+func main(){
+    n := 1
+    for x := 0; x <= n; x++ {
+        fmt.Println(x)
+    }
 }
-writeZeroToN(1);
 ```
 
 ## Example Code 2
 
 This code prints the integers from 0 to 2.
 
-```javascript
-function writeZeroToN(n) {
-  for (let x = 0; x <= n; x++) {
-    console.log(x);
-  }
+```go
+package main
+
+import "fmt"
+
+func main(){
+    n := 2
+    for x := 0; x <= n; x++ {
+        fmt.Println(x)
+    }
 }
-writeZeroToN(2);
 ```
 
