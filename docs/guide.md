@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** c3q7ykkli9u-mf8vcuov
+**Document ID:** shp3xipyp7g-mfegdc1b
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -18,6 +18,33 @@ Simple R vector example computing squares of a sequence.
 nums <- 1:5
 squares <- nums^2
 print(squares)
+```
+
+
+## SQL: Group and Order
+
+SQL query that groups by name and orders by count descending.
+
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
+```
+
+
+## Python: Fibonacci Generator
+
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
