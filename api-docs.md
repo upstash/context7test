@@ -2,11 +2,24 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** xr7t66q7lf9-mfhu0476
+**Document ID:** w1h6696hul-mfhuym38
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
+
+## Elixir: Enum Pipeline
+
+Elixir pipeline that filters even numbers and inspects the result.
+
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
+```
+
+
+## Code Example 2
 
 ## Swift: Map and Filter
 
@@ -16,22 +29,6 @@ Demonstrates Swift's map and filter on arrays for concise transformation.
 let nums = [1,2,3,4,5]
 let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
 print(evensDoubled)
-```
-
-
-## Code Example 2
-
-## Kotlin: Data Class Copy
-
-Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
-
-```kotlin
-data class User(val id:Int, val name:String, val active:Boolean)
-fun main(){
-  val u1 = User(1, "Ada", true)
-  val u2 = u1.copy(active = false)
-  println(u2)
-}
 ```
 
 
