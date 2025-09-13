@@ -2,31 +2,36 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** s2mlw80da4d-mfhqwg9f
+**Document ID:** xr7t66q7lf9-mfhu0476
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Haskell: Filter and Map
+## Swift: Map and Filter
 
-A minimal Haskell example filtering odd numbers and squaring them.
+Demonstrates Swift's map and filter on arrays for concise transformation.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```swift
+let nums = [1,2,3,4,5]
+let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
+print(evensDoubled)
 ```
 
 
 ## Code Example 2
 
-## Bash: Count Files
+## Kotlin: Data Class Copy
 
-Counts files in the current directory using common shell tools.
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
+}
 ```
 
 
