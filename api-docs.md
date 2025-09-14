@@ -2,33 +2,34 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** w1h6696hul-mfhuym38
+**Document ID:** 0c5gi71jzenm-mfk7joy7
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Elixir: Enum Pipeline
+## Bash: Count Files
 
-Elixir pipeline that filters even numbers and inspects the result.
+Counts files in the current directory using common shell tools.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
 ## Code Example 2
 
-## Swift: Map and Filter
+## Dart: Map Over List
 
-Demonstrates Swift's map and filter on arrays for concise transformation.
+Dart example mapping over a list and printing the result.
 
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
 ```
 
 
