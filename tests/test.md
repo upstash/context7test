@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 5f77pxln9xs-mflq0vmd
+**Document ID:** alay2mmiurh-mflq2f4j
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,28 +10,17 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## PHP: JSON Response
+## Scala: List Pipeline
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
-```
-
-
-## Rust: Read Lines
-
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
-
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
 }
 ```
 
