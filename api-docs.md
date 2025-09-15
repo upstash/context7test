@@ -2,33 +2,43 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 0c5gi71jzenm-mfk7joy7
+**Document ID:** 1dmq1q2zyacj-mflqhrlf
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Bash: Count Files
+## C++: Transform Vector
 
-Counts files in the current directory using common shell tools.
+C++ transforms a vector in-place and prints the results.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
+}
 ```
 
 
 ## Code Example 2
 
-## Dart: Map Over List
+## C#: LINQ Query
 
-Dart example mapping over a list and printing the result.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
 }
 ```
 
