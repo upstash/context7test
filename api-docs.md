@@ -2,44 +2,41 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 1dmq1q2zyacj-mflqhrlf
+**Document ID:** 3ug13d32ejv-mfm0xx5b
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## C++: Transform Vector
+## Go: HTTP Server
 
-C++ transforms a vector in-place and prints the results.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-  vector<int> v{1,2,3,4,5};
-  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
-  for (auto n: v) cout<<n<<" ";
-  return 0;
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
 }
 ```
 
 
 ## Code Example 2
 
-## C#: LINQ Query
+## JavaScript: Sum Array Elements
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
-}
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
