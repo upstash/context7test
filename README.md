@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 2blauwt2nx-mfpmhoqb
+**Document ID:** cejme5gwuus-mfpmhpje
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -29,20 +29,25 @@ func main(){
 ```
 
 
-## C#: LINQ Query
+## SQL: Group and Order
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+SQL query that groups by name and orders by count descending.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
-}
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
+```
+
+
+## Bash: Count Files
+
+Counts files in the current directory using common shell tools.
+
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
