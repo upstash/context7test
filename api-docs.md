@@ -2,41 +2,43 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 3ug13d32ejv-mfm0xx5b
+**Document ID:** 9vnub586c49-mfpmktfp
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Go: HTTP Server
+## Rust: Read Lines
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
 }
 ```
 
 
 ## Code Example 2
 
-## JavaScript: Sum Array Elements
+## C#: LINQ Query
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
 ```
 
 
