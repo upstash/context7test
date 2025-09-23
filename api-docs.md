@@ -2,43 +2,37 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 9vnub586c49-mfpmktfp
+**Document ID:** lvn9sjjtcs-mfx5t63d
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Rust: Read Lines
+## R: Vector Arithmetic
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+Simple R vector example computing squares of a sequence.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
-}
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
 ```
 
 
 ## Code Example 2
 
-## C#: LINQ Query
+## Python: Fibonacci Generator
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
-}
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
