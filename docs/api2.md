@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** vhuflbp7wok-mfx5oyhz
+**Document ID:** 344yikhz94z-mfx5oyi1
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -27,16 +27,6 @@ class Main {
     System.out.println(doubledEvens);
   }
 }
-```
-
-
-## Bash: Count Files
-
-Counts files in the current directory using common shell tools.
-
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
 ```
 
 
