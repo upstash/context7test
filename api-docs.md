@@ -2,33 +2,39 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 2b0y4e8tkck-mfzti74p
+**Document ID:** qxhamuiwiab-mfzzbcg6
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Elixir: Enum Pipeline
+## SQL: Group and Order
 
-Elixir pipeline that filters even numbers and inspects the result.
+SQL query that groups by name and orders by count descending.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
 ## Code Example 2
 
-## Swift: Map and Filter
+## C++: Transform Vector
 
-Demonstrates Swift's map and filter on arrays for concise transformation.
+C++ transforms a vector in-place and prints the results.
 
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
+}
 ```
 
 
