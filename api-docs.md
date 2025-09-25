@@ -2,37 +2,33 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** lvn9sjjtcs-mfx5t63d
+**Document ID:** 2b0y4e8tkck-mfzti74p
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## R: Vector Arithmetic
+## Elixir: Enum Pipeline
 
-Simple R vector example computing squares of a sequence.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
 ## Code Example 2
 
-## Python: Fibonacci Generator
+## Swift: Map and Filter
 
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+Demonstrates Swift's map and filter on arrays for concise transformation.
 
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(10)))
+```swift
+let nums = [1,2,3,4,5]
+let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
+print(evensDoubled)
 ```
 
 
