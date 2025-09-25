@@ -2,38 +2,35 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** qxhamuiwiab-mfzzbcg6
+**Document ID:** ltvgljqd02f-mfzzim81
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## SQL: Group and Order
+## Haskell: Filter and Map
 
-SQL query that groups by name and orders by count descending.
+A minimal Haskell example filtering odd numbers and squaring them.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
 ## Code Example 2
 
-## C++: Transform Vector
+## Scala: List Pipeline
 
-C++ transforms a vector in-place and prints the results.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-  vector<int> v{1,2,3,4,5};
-  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
-  for (auto n: v) cout<<n<<" ";
-  return 0;
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
 }
 ```
 
