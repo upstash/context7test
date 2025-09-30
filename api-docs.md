@@ -2,36 +2,33 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** ltvgljqd02f-mfzzim81
+**Document ID:** n9ltp3zvfhj-mg7374hp
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Haskell: Filter and Map
+## Swift: Map and Filter
 
-A minimal Haskell example filtering odd numbers and squaring them.
+Demonstrates Swift's map and filter on arrays for concise transformation.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```swift
+let nums = [1,2,3,4,5]
+let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
+print(evensDoubled)
 ```
 
 
 ## Code Example 2
 
-## Scala: List Pipeline
+## PHP: JSON Response
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
-}
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
