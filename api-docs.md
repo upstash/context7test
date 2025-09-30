@@ -2,33 +2,43 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** n9ltp3zvfhj-mg7374hp
+**Document ID:** dobho9xvapp-mg73s157
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Swift: Map and Filter
+## C#: LINQ Query
 
-Demonstrates Swift's map and filter on arrays for concise transformation.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
 ```
 
 
 ## Code Example 2
 
-## PHP: JSON Response
+## Python: Fibonacci Generator
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
