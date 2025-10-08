@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 03p9j5kjdwmu-mgiix8mi
+**Document ID:** 5c2br1aq9en-mgiix8o1
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,31 +10,45 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Dart: Map Over List
+## Java: Stream Map/Filter
 
-Dart example mapping over a list and printing the result.
+Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
 
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
+```java
+import java.util.*;
+import java.util.stream.*;
+class Main {
+  public static void main(String[] args) {
+    List<Integer> nums = Arrays.asList(1,2,3,4,5);
+    List<Integer> doubledEvens = nums.stream()
+      .filter(n -> n % 2 == 0)
+      .map(n -> n * 2)
+      .collect(Collectors.toList());
+    System.out.println(doubledEvens);
+  }
 }
 ```
 
 
-## Rust: Read Lines
+## Julia: Comprehension
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+Julia list comprehension generating cubes of a range.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
-}
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
+```
+
+
+## Swift: Map and Filter
+
+Demonstrates Swift's map and filter on arrays for concise transformation.
+
+```swift
+let nums = [1,2,3,4,5]
+let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
+print(evensDoubled)
 ```
 
 
