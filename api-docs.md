@@ -2,43 +2,37 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** dobho9xvapp-mg73s157
+**Document ID:** wc31ezgd9s8-mgijn7ae
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## C#: LINQ Query
+## C++: Transform Vector
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+C++ transforms a vector in-place and prints the results.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
 }
 ```
 
 
 ## Code Example 2
 
-## Python: Fibonacci Generator
+## Bash: Count Files
 
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+Counts files in the current directory using common shell tools.
 
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(10)))
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
