@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** qhpfiyk1hbj-mgimq9uq
+**Document ID:** o6q8xcwpbe-mgimstjz
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,36 +10,37 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Julia: Comprehension
+## Go: HTTP Server
 
-Julia list comprehension generating cubes of a range.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
+}
 ```
 
 
-## PHP: JSON Response
+## Rust: Read Lines
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
-```
-
-
-## Elixir: Enum Pipeline
-
-Elixir pipeline that filters even numbers and inspects the result.
-
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
+}
 ```
 
 
