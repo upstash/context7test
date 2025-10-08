@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** zorfeg5qlt-mgijgec1
+**Document ID:** cr8y1h76mls-mgijgr4k
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -25,33 +25,14 @@ object Main {
 ```
 
 
-## Go: HTTP Server
+## PHP: JSON Response
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
-}
-```
-
-
-## JavaScript: Sum Array Elements
-
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
-
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
