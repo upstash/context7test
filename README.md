@@ -2,13 +2,33 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 7utpl5e2b2d-mgimf715
+**Document ID:** xbp22l33yb-mgimflev
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
 Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
+
+## Bash: Count Files
+
+Counts files in the current directory using common shell tools.
+
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
+```
+
+
+## Haskell: Filter and Map
+
+A minimal Haskell example filtering odd numbers and squaring them.
+
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
+```
+
 
 ## Python: Fibonacci Generator
 
@@ -22,29 +42,6 @@ def fib(n):
         a, b = b, a + b
 
 print(list(fib(10)))
-```
-
-
-## SQL: Group and Order
-
-SQL query that groups by name and orders by count descending.
-
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
-```
-
-
-## Julia: Comprehension
-
-Julia list comprehension generating cubes of a range.
-
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
 ```
 
 
