@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 793rjbempeh-mgjp4ksw
+**Document ID:** js2ndvovhxi-mgjp7fci
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -27,29 +27,15 @@ class Program {
 ```
 
 
-## Rust: Read Lines
+## Ruby: Word Count
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
-}
-```
-
-
-## Julia: Comprehension
-
-Julia list comprehension generating cubes of a range.
-
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
 
