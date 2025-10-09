@@ -2,7 +2,7 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** atbauu1gfgv-mgimx4yb
+**Document ID:** 4etmlu7dmzt-mgjpc87s
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
@@ -27,22 +27,21 @@ class Program {
 
 ## Code Example 2
 
-## Java: Stream Map/Filter
+## Go: HTTP Server
 
-Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```java
-import java.util.*;
-import java.util.stream.*;
-class Main {
-  public static void main(String[] args) {
-    List<Integer> nums = Arrays.asList(1,2,3,4,5);
-    List<Integer> doubledEvens = nums.stream()
-      .filter(n -> n % 2 == 0)
-      .map(n -> n * 2)
-      .collect(Collectors.toList());
-    System.out.println(doubledEvens);
-  }
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
 }
 ```
 
