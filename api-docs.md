@@ -2,47 +2,32 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 4etmlu7dmzt-mgjpc87s
+**Document ID:** iu88z9gv7jg-mgjs6t7j
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## C#: LINQ Query
+## Haskell: Filter and Map
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+A minimal Haskell example filtering odd numbers and squaring them.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
-}
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
 ## Code Example 2
 
-## Go: HTTP Server
+## Julia: Comprehension
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+Julia list comprehension generating cubes of a range.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
-}
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
 ```
 
 
