@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 561x7iwzi3y-mgjwt8cq
+**Document ID:** or69dx7tjyj-mgjwtnqu
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -23,30 +23,14 @@ void main() {
 ```
 
 
-## C++: Transform Vector
+## Elixir: Enum Pipeline
 
-C++ transforms a vector in-place and prints the results.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-  vector<int> v{1,2,3,4,5};
-  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
-  for (auto n: v) cout<<n<<" ";
-  return 0;
-}
-```
-
-
-## PHP: JSON Response
-
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
-
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 

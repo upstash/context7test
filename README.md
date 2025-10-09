@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** yit11b3f93d-mgjwt8co
+**Document ID:** jsv78ptsq9-mgjwtnqr
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,24 +21,33 @@ IO.inspect(evens)
 ```
 
 
-## Swift: Map and Filter
+## Rust: Read Lines
 
-Demonstrates Swift's map and filter on arrays for concise transformation.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
+}
 ```
 
 
-## Haskell: Filter and Map
+## Python: Fibonacci Generator
 
-A minimal Haskell example filtering odd numbers and squaring them.
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
