@@ -2,7 +2,7 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 4hfrsy9adq8-mgpzim1s
+**Document ID:** fojakntkcvq-mgqyrh8d
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
@@ -29,14 +29,15 @@ func main(){
 
 ## Code Example 2
 
-## JavaScript: Sum Array Elements
+## Ruby: Word Count
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
 
