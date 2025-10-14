@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 4up4p7yd7z8-mgr1zquv
+**Document ID:** be1r0j2584g-mgr20go9
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -22,14 +22,14 @@ puts counts
 ```
 
 
-## Elixir: Enum Pipeline
+## Julia: Comprehension
 
-Elixir pipeline that filters even numbers and inspects the result.
+Julia list comprehension generating cubes of a range.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
 ```
 
 
