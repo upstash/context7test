@@ -2,46 +2,32 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** ltmobbym1cl-mgr2283u
+**Document ID:** mnla0gsin5q-mgr3mjan
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Scala: List Pipeline
+## Bash: Count Files
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+Counts files in the current directory using common shell tools.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
-}
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
 ## Code Example 2
 
-## Java: Stream Map/Filter
+## Elixir: Enum Pipeline
 
-Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```java
-import java.util.*;
-import java.util.stream.*;
-class Main {
-  public static void main(String[] args) {
-    List<Integer> nums = Arrays.asList(1,2,3,4,5);
-    List<Integer> doubledEvens = nums.stream()
-      .filter(n -> n % 2 == 0)
-      .map(n -> n * 2)
-      .collect(Collectors.toList());
-    System.out.println(doubledEvens);
-  }
-}
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
