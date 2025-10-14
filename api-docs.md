@@ -2,42 +2,46 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** fojakntkcvq-mgqyrh8d
+**Document ID:** ltmobbym1cl-mgr2283u
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Go: HTTP Server
+## Scala: List Pipeline
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
 }
 ```
 
 
 ## Code Example 2
 
-## Ruby: Word Count
+## Java: Stream Map/Filter
 
-Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
+Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
 
-```ruby
-text = "to be or not to be"
-counts = Hash.new(0)
-text.split.each { |w| counts[w] += 1 }
-puts counts
+```java
+import java.util.*;
+import java.util.stream.*;
+class Main {
+  public static void main(String[] args) {
+    List<Integer> nums = Arrays.asList(1,2,3,4,5);
+    List<Integer> doubledEvens = nums.stream()
+      .filter(n -> n % 2 == 0)
+      .map(n -> n * 2)
+      .collect(Collectors.toList());
+    System.out.println(doubledEvens);
+  }
+}
 ```
 
 
