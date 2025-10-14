@@ -1,0 +1,6 @@
+{
+  "name": "test-refresh",
+  "version": "1.0.0",
+  "description": "Test project for context refresh",
+  "main": "src/user.ts"
+}
