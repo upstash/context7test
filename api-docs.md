@@ -2,32 +2,41 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** iu88z9gv7jg-mgjs6t7j
+**Document ID:** 4hfrsy9adq8-mgpzim1s
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Haskell: Filter and Map
+## Go: HTTP Server
 
-A minimal Haskell example filtering odd numbers and squaring them.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
+}
 ```
 
 
 ## Code Example 2
 
-## Julia: Comprehension
+## JavaScript: Sum Array Elements
 
-Julia list comprehension generating cubes of a range.
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
