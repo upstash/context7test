@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** lb7po3601o-mgpywkf3
+**Document ID:** poop57yqz8f-mgpz18u3
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,46 +10,24 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## SQL: Group and Order
+## Elixir: Enum Pipeline
 
-SQL query that groups by name and orders by count descending.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
-## PHP: JSON Response
+## Bash: Count Files
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+Counts files in the current directory using common shell tools.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
-```
-
-
-## Java: Stream Map/Filter
-
-Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
-
-```java
-import java.util.*;
-import java.util.stream.*;
-class Main {
-  public static void main(String[] args) {
-    List<Integer> nums = Arrays.asList(1,2,3,4,5);
-    List<Integer> doubledEvens = nums.stream()
-      .filter(n -> n % 2 == 0)
-      .map(n -> n * 2)
-      .collect(Collectors.toList());
-    System.out.println(doubledEvens);
-  }
-}
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
