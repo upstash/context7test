@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** nkffnl77shl-mgpxvtbi
+**Document ID:** cfnew00k3kj-mgpxvtbi
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,24 +21,15 @@ print(evensDoubled)
 ```
 
 
-## PHP: JSON Response
+## SQL: Group and Order
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+SQL query that groups by name and orders by count descending.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
-```
-
-
-## Haskell: Filter and Map
-
-A minimal Haskell example filtering odd numbers and squaring them.
-
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
