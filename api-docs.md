@@ -2,32 +2,42 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** mnla0gsin5q-mgr3mjan
+**Document ID:** ujzpis47c1-mh2nh8hj
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Bash: Count Files
+## C++: Transform Vector
 
-Counts files in the current directory using common shell tools.
+C++ transforms a vector in-place and prints the results.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
+}
 ```
 
 
 ## Code Example 2
 
-## Elixir: Enum Pipeline
+## Python: Fibonacci Generator
 
-Elixir pipeline that filters even numbers and inspects the result.
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
