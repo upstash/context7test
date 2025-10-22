@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** s2hksrcfltd-mh2n9k2o
+**Document ID:** h1oztzvqsn-mh2nb5p7
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -17,21 +17,6 @@ A minimal Haskell example filtering odd numbers and squaring them.
 ```haskell
 main :: IO ()
 main = print $ map (^2) $ filter odd [1..10]
-```
-
-
-## Scala: List Pipeline
-
-Uses Scala collections to filter and map a list with a clear pipeline.
-
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
-}
 ```
 
 

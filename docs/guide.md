@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** op98xmgekz-mh2n9k2m
+**Document ID:** 5j1ion5k8gp-mh2nb5p8
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -18,17 +18,6 @@ Julia list comprehension generating cubes of a range.
 nums = 1:5
 cubes = [n^3 for n in nums]
 println(cubes)
-```
-
-
-## TypeScript: Typed User Model
-
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
-
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
