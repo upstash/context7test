@@ -2,7 +2,7 @@
 
     This file is generated for E2E parsing.
     
-    **Document ID:** umk7gioc7e-mh53o3t1
+    **Document ID:** ti01rhx69bq-mh53urp5
     
     This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
     
@@ -10,42 +10,36 @@
     
     Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
     
-    ## Scala: List Pipeline
+    ## Ruby: Word Count
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
-}
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
 
-## TypeScript: Typed User Model
+## PHP: JSON Response
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
-## Dart: Map Over List
+## Bash: Count Files
 
-Dart example mapping over a list and printing the result.
+Counts files in the current directory using common shell tools.
 
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
-}
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
