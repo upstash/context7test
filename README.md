@@ -2,7 +2,7 @@
 
     This file is generated for E2E parsing.
     
-    **Document ID:** 9z1ywqx87di-mh5afvcc
+    **Document ID:** 5ns5irdyvi-mh5ahbeu
     
     This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
     
@@ -10,40 +10,44 @@
     
     Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
     
-    ## SQL: Group and Order
+    ## Java: Stream Map/Filter
 
-SQL query that groups by name and orders by count descending.
+Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
-```
-
-
-## Bash: Count Files
-
-Counts files in the current directory using common shell tools.
-
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
-```
-
-
-## Rust: Read Lines
-
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
-
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
+```java
+import java.util.*;
+import java.util.stream.*;
+class Main {
+  public static void main(String[] args) {
+    List<Integer> nums = Arrays.asList(1,2,3,4,5);
+    List<Integer> doubledEvens = nums.stream()
+      .filter(n -> n % 2 == 0)
+      .map(n -> n * 2)
+      .collect(Collectors.toList());
+    System.out.println(doubledEvens);
+  }
 }
+```
+
+
+## R: Vector Arithmetic
+
+Simple R vector example computing squares of a sequence.
+
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
+```
+
+
+## Haskell: Filter and Map
+
+A minimal Haskell example filtering odd numbers and squaring them.
+
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
