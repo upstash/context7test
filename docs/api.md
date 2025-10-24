@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** gsajg5vjny-mh56junv
+**Document ID:** x6tjmx1p37-mh56rv44
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,34 +10,26 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## C#: LINQ Query
+## R: Vector Arithmetic
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+Simple R vector example computing squares of a sequence.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
-}
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
 ```
 
 
-## Scala: List Pipeline
+## Dart: Map Over List
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+Dart example mapping over a list and printing the result.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
 }
 ```
 

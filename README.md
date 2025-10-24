@@ -2,7 +2,7 @@
 
     This file is generated for E2E parsing.
     
-    **Document ID:** 4jzb1uuk5x-mh56juns
+    **Document ID:** o2qmfre4qun-mh56rv42
     
     This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
     
@@ -10,22 +10,7 @@
     
     Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
     
-    ## Scala: List Pipeline
-
-Uses Scala collections to filter and map a list with a clear pipeline.
-
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
-}
-```
-
-
-## C#: LINQ Query
+    ## C#: LINQ Query
 
 Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
@@ -42,14 +27,26 @@ class Program {
 ```
 
 
-## TypeScript: Typed User Model
+## SQL: Group and Order
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+SQL query that groups by name and orders by count descending.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
+```
+
+
+## Julia: Comprehension
+
+Julia list comprehension generating cubes of a range.
+
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
 ```
 
 
