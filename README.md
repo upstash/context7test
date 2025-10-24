@@ -2,7 +2,7 @@
 
     This file is generated for E2E parsing.
     
-    **Document ID:** vc885bi779-mh45j783
+    **Document ID:** 7gqxgck3x0c-mh53jxn8
     
     This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
     
@@ -10,36 +10,46 @@
     
     Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
     
-    ## JavaScript: Sum Array Elements
+    ## Rust: Read Lines
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
+}
 ```
 
 
-## PHP: JSON Response
+## Dart: Map Over List
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+Dart example mapping over a list and printing the result.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
 ```
 
 
-## R: Vector Arithmetic
+## Scala: List Pipeline
 
-Simple R vector example computing squares of a sequence.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
+}
 ```
 
 
