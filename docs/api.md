@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 9qdsi55n2q-mh54dohh
+**Document ID:** g0bqzzbzvet-mh54jn3z
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -23,19 +23,15 @@ void main() {
 ```
 
 
-## C++: Transform Vector
+## SQL: Group and Order
 
-C++ transforms a vector in-place and prints the results.
+SQL query that groups by name and orders by count descending.
 
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-  vector<int> v{1,2,3,4,5};
-  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
-  for (auto n: v) cout<<n<<" ";
-  return 0;
-}
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 

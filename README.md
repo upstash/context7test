@@ -2,7 +2,7 @@
 
     This file is generated for E2E parsing.
     
-    **Document ID:** cihukf6labv-mh54dohf
+    **Document ID:** dyag68ufutv-mh54jn3w
     
     This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
     
@@ -10,7 +10,18 @@
     
     Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
     
-    ## Bash: Count Files
+    ## Swift: Map and Filter
+
+Demonstrates Swift's map and filter on arrays for concise transformation.
+
+```swift
+let nums = [1,2,3,4,5]
+let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
+print(evensDoubled)
+```
+
+
+## Bash: Count Files
 
 Counts files in the current directory using common shell tools.
 
@@ -20,34 +31,15 @@ echo "Files: $FILES"
 ```
 
 
-## C++: Transform Vector
+## SQL: Group and Order
 
-C++ transforms a vector in-place and prints the results.
+SQL query that groups by name and orders by count descending.
 
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-  vector<int> v{1,2,3,4,5};
-  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
-  for (auto n: v) cout<<n<<" ";
-  return 0;
-}
-```
-
-
-## Scala: List Pipeline
-
-Uses Scala collections to filter and map a list with a clear pipeline.
-
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
-}
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
