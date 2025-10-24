@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** lwb3uqb7qms-mh55kdfd
+**Document ID:** vz09e2d2m07-mh55n3k0
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -24,29 +24,30 @@ fun main(){
 ```
 
 
-## Swift: Map and Filter
+## C#: LINQ Query
 
-Demonstrates Swift's map and filter on arrays for concise transformation.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
 ```
 
 
-## Scala: List Pipeline
+## Bash: Count Files
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+Counts files in the current directory using common shell tools.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
-}
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
