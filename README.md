@@ -2,7 +2,7 @@
 
     This file is generated for E2E parsing.
     
-    **Document ID:** wb7if57tlql-mh57uwt6
+    **Document ID:** 9z1ywqx87di-mh5afvcc
     
     This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
     
@@ -10,18 +10,25 @@
     
     Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
     
-    ## Scala: List Pipeline
+    ## SQL: Group and Order
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+SQL query that groups by name and orders by count descending.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
-}
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
+```
+
+
+## Bash: Count Files
+
+Counts files in the current directory using common shell tools.
+
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
@@ -36,25 +43,6 @@ fn main(){
     for line in stdin.lock().lines() {
         println!("{}", line.unwrap());
     }
-}
-```
-
-
-## Go: HTTP Server
-
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
-
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
 }
 ```
 
