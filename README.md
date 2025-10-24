@@ -2,7 +2,7 @@
 
     This file is generated for E2E parsing.
     
-    **Document ID:** 6be4eh5woh-mh447z9g
+    **Document ID:** 5vnsls9n8mm-mh44dute
     
     This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
     
@@ -10,7 +10,32 @@
     
     Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
     
-    ## Elixir: Enum Pipeline
+    ## Python: Fibonacci Generator
+
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
+```
+
+
+## Bash: Count Files
+
+Counts files in the current directory using common shell tools.
+
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
+```
+
+
+## Elixir: Enum Pipeline
 
 Elixir pipeline that filters even numbers and inspects the result.
 
@@ -18,28 +43,6 @@ Elixir pipeline that filters even numbers and inspects the result.
 nums = 1..10 |> Enum.to_list()
 evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
 IO.inspect(evens)
-```
-
-
-## R: Vector Arithmetic
-
-Simple R vector example computing squares of a sequence.
-
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
-```
-
-
-## TypeScript: Typed User Model
-
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
-
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
