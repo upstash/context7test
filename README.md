@@ -2,7 +2,7 @@
 
     This file is generated for E2E parsing.
     
-    **Document ID:** 6oprmrj1ycb-mh56uy4m
+    **Document ID:** i4pb03829n-mh575yjx
     
     This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
     
@@ -21,39 +21,28 @@ console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
-## Java: Stream Map/Filter
+## Haskell: Filter and Map
 
-Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
+A minimal Haskell example filtering odd numbers and squaring them.
 
-```java
-import java.util.*;
-import java.util.stream.*;
-class Main {
-  public static void main(String[] args) {
-    List<Integer> nums = Arrays.asList(1,2,3,4,5);
-    List<Integer> doubledEvens = nums.stream()
-      .filter(n -> n % 2 == 0)
-      .map(n -> n * 2)
-      .collect(Collectors.toList());
-    System.out.println(doubledEvens);
-  }
-}
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
-## C#: LINQ Query
+## C++: Transform Vector
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+C++ transforms a vector in-place and prints the results.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
 }
 ```
 
