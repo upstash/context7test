@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** ef3s8olqcfi-mh43yjac
+**Document ID:** ztvbhmsr1mb-mh447z9j
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -27,19 +27,15 @@ class Program {
 ```
 
 
-## C++: Transform Vector
+## Ruby: Word Count
 
-C++ transforms a vector in-place and prints the results.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-  vector<int> v{1,2,3,4,5};
-  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
-  for (auto n: v) cout<<n<<" ";
-  return 0;
-}
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
 
