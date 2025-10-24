@@ -2,7 +2,7 @@
 
     This file is generated for E2E parsing.
     
-    **Document ID:** hx2kf1vki57-mh44pi3x
+    **Document ID:** f2ccvzf4e2g-mh44wg57
     
     This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
     
@@ -10,33 +10,25 @@
     
     Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
     
-    ## Go: HTTP Server
+    ## Bash: Count Files
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+Counts files in the current directory using common shell tools.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
-}
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
-## Julia: Comprehension
+## SQL: Group and Order
 
-Julia list comprehension generating cubes of a range.
+SQL query that groups by name and orders by count descending.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
