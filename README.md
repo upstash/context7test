@@ -2,7 +2,7 @@
 
     This file is generated for E2E parsing.
     
-    **Document ID:** 5vnsls9n8mm-mh44dute
+    **Document ID:** hx2kf1vki57-mh44pi3x
     
     This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
     
@@ -10,39 +10,50 @@
     
     Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
     
-    ## Python: Fibonacci Generator
+    ## Go: HTTP Server
 
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(10)))
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
+}
 ```
 
 
-## Bash: Count Files
+## Julia: Comprehension
 
-Counts files in the current directory using common shell tools.
+Julia list comprehension generating cubes of a range.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
 ```
 
 
-## Elixir: Enum Pipeline
+## C#: LINQ Query
 
-Elixir pipeline that filters even numbers and inspects the result.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
 ```
 
 
