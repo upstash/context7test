@@ -2,42 +2,47 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** ujzpis47c1-mh2nh8hj
+**Document ID:** zub0ig2pom-mh5f3s2x
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## C++: Transform Vector
+## Go: HTTP Server
 
-C++ transforms a vector in-place and prints the results.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-  vector<int> v{1,2,3,4,5};
-  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
-  for (auto n: v) cout<<n<<" ";
-  return 0;
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
 }
 ```
 
 
 ## Code Example 2
 
-## Python: Fibonacci Generator
+## C#: LINQ Query
 
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(10)))
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
 ```
 
 
