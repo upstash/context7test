@@ -2,7 +2,7 @@
 
     This file is generated for E2E parsing.
     
-    **Document ID:** dyag68ufutv-mh54jn3w
+    **Document ID:** 8brxqvtnffu-mh54nnwp
     
     This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
     
@@ -10,36 +10,41 @@
     
     Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
     
-    ## Swift: Map and Filter
+    ## Python: Fibonacci Generator
 
-Demonstrates Swift's map and filter on arrays for concise transformation.
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
 
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
-## Bash: Count Files
+## Haskell: Filter and Map
 
-Counts files in the current directory using common shell tools.
+A minimal Haskell example filtering odd numbers and squaring them.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
-## SQL: Group and Order
+## Dart: Map Over List
 
-SQL query that groups by name and orders by count descending.
+Dart example mapping over a list and printing the result.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
 ```
 
 
