@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** z10za49b1j-mh9crvzb
+**Document ID:** s9ci0bmr0mc-mh9csdc5
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -27,24 +27,25 @@ class Program {
 ```
 
 
-## Julia: Comprehension
+## JavaScript: Sum Array Elements
 
-Julia list comprehension generating cubes of a range.
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
-## Haskell: Filter and Map
+## TypeScript: Typed User Model
 
-A minimal Haskell example filtering odd numbers and squaring them.
+This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```typescript
+interface User { id: number; name: string; active: boolean }
+function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
+console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
