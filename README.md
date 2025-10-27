@@ -2,7 +2,7 @@
 
     This file is generated for E2E parsing.
     
-    **Document ID:** x3fr9rg93g-mh9bb5h4
+    **Document ID:** aryqf5vy1xo-mh9bbkm7
     
     This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
     
@@ -10,7 +10,18 @@
     
     Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
     
-    ## PHP: JSON Response
+    ## Elixir: Enum Pipeline
+
+Elixir pipeline that filters even numbers and inspects the result.
+
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
+```
+
+
+## PHP: JSON Response
 
 Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
@@ -21,33 +32,13 @@ echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
-## TypeScript: Typed User Model
+## Bash: Count Files
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+Counts files in the current directory using common shell tools.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
-```
-
-
-## Go: HTTP Server
-
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
-
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
-}
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
