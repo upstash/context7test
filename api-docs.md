@@ -2,47 +2,36 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** zub0ig2pom-mh5f3s2x
+**Document ID:** oqyuzgoueij-mh9ptksb
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Go: HTTP Server
+## Dart: Map Over List
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+Dart example mapping over a list and printing the result.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
 }
 ```
 
 
 ## Code Example 2
 
-## C#: LINQ Query
+## Ruby: Word Count
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
-}
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
 
