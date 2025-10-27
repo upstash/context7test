@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 50yyiie42xl-mh9rufnb
+**Document ID:** ndhs1kcbzj-mh9rufom
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,18 +21,28 @@ console.log(total);
 ```
 
 
-## Python: Fibonacci Generator
+## Elixir: Enum Pipeline
 
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
+```
 
-print(list(fib(10)))
+
+## Kotlin: Data Class Copy
+
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
+
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
+}
 ```
 
 
