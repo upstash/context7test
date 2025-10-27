@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** csc492dd53a-mh9s09k3
+**Document ID:** oe78bjnff1-mh9s0acn
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,25 +10,30 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## R: Vector Arithmetic
+## Python: Fibonacci Generator
 
-Simple R vector example computing squares of a sequence.
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
-## Julia: Comprehension
+## Ruby: Word Count
 
-Julia list comprehension generating cubes of a range.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
 
