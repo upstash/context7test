@@ -2,7 +2,7 @@
 
     This file is generated for E2E parsing.
     
-    **Document ID:** oppqrnulxkr-mhbaao14
+    **Document ID:** 6uu5ib7jwhi-mhbadio6
     
     This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
     
@@ -10,17 +10,17 @@
     
     Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
     
-    ## Rust: Read Lines
+    ## Scala: List Pipeline
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
 }
 ```
 
@@ -36,14 +36,22 @@ console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
-## Elixir: Enum Pipeline
+## Go: HTTP Server
 
-Elixir pipeline that filters even numbers and inspects the result.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
+}
 ```
 
 
