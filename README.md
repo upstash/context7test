@@ -2,7 +2,7 @@
 
     This file is generated for E2E parsing.
     
-    **Document ID:** oafh2mjzsfp-mhb99yvw
+    **Document ID:** oppqrnulxkr-mhbaao14
     
     This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
     
@@ -10,43 +10,40 @@
     
     Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
     
-    ## Haskell: Filter and Map
+    ## Rust: Read Lines
 
-A minimal Haskell example filtering odd numbers and squaring them.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
-```
-
-
-## Dart: Map Over List
-
-Dart example mapping over a list and printing the result.
-
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
 }
 ```
 
 
-## C#: LINQ Query
+## TypeScript: Typed User Model
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
-}
+```typescript
+interface User { id: number; name: string; active: boolean }
+function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
+console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```
+
+
+## Elixir: Enum Pipeline
+
+Elixir pipeline that filters even numbers and inspects the result.
+
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
