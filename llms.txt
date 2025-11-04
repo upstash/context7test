@@ -1,0 +1,14 @@
+/docs/guide.md
+/docs/api.md
+
+```typescript
+// Quick Start Example
+import { Client } from '@upstash/example';
+
+const client = new Client({
+  url: process.env.UPSTASH_URL,
+  token: process.env.UPSTASH_TOKEN
+});
+
+await client.connect();
+```
