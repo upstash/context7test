@@ -2,36 +2,38 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** oqyuzgoueij-mh9ptksb
+**Document ID:** desl4pydnnp-mhlc7r5n
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Dart: Map Over List
+## PHP: JSON Response
 
-Dart example mapping over a list and printing the result.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
-}
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
 ## Code Example 2
 
-## Ruby: Word Count
+## C++: Transform Vector
 
-Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
+C++ transforms a vector in-place and prints the results.
 
-```ruby
-text = "to be or not to be"
-counts = Hash.new(0)
-text.split.each { |w| counts[w] += 1 }
-puts counts
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
+}
 ```
 
 
