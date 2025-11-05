@@ -2,37 +2,40 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** desl4pydnnp-mhlc7r5n
+**Document ID:** 7yctiefifiu-mhmcc95w
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## PHP: JSON Response
+## Scala: List Pipeline
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
+}
 ```
 
 
 ## Code Example 2
 
-## C++: Transform Vector
+## Rust: Read Lines
 
-C++ transforms a vector in-place and prints the results.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-  vector<int> v{1,2,3,4,5};
-  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
-  for (auto n: v) cout<<n<<" ";
-  return 0;
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
 }
 ```
 
