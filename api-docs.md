@@ -2,22 +2,27 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 7yctiefifiu-mhmcc95w
+**Document ID:** a5zyv2kqos-mhw4a0n3
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Scala: List Pipeline
+## Java: Stream Map/Filter
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
+```java
+import java.util.*;
+import java.util.stream.*;
+class Main {
+  public static void main(String[] args) {
+    List<Integer> nums = Arrays.asList(1,2,3,4,5);
+    List<Integer> doubledEvens = nums.stream()
+      .filter(n -> n % 2 == 0)
+      .map(n -> n * 2)
+      .collect(Collectors.toList());
+    System.out.println(doubledEvens);
   }
 }
 ```
@@ -25,17 +30,15 @@ object Main {
 
 ## Code Example 2
 
-## Rust: Read Lines
+## Dart: Map Over List
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+Dart example mapping over a list and printing the result.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
 }
 ```
 
