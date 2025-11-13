@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** ixyzhtwogpm-mhxgp4cr
+**Document ID:** i2phmpqv3t-mhxgq3s7
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -25,15 +25,20 @@ object Main {
 ```
 
 
-## Ruby: Word Count
+## C#: LINQ Query
 
-Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```ruby
-text = "to be or not to be"
-counts = Hash.new(0)
-text.split.each { |w| counts[w] += 1 }
-puts counts
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
 ```
 
 
