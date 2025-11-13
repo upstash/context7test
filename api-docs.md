@@ -2,44 +2,41 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** a5zyv2kqos-mhw4a0n3
+**Document ID:** 6hbp192d9ln-mhxgv3se
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Java: Stream Map/Filter
+## Go: HTTP Server
 
-Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```java
-import java.util.*;
-import java.util.stream.*;
-class Main {
-  public static void main(String[] args) {
-    List<Integer> nums = Arrays.asList(1,2,3,4,5);
-    List<Integer> doubledEvens = nums.stream()
-      .filter(n -> n % 2 == 0)
-      .map(n -> n * 2)
-      .collect(Collectors.toList());
-    System.out.println(doubledEvens);
-  }
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
 }
 ```
 
 
 ## Code Example 2
 
-## Dart: Map Over List
+## JavaScript: Sum Array Elements
 
-Dart example mapping over a list and printing the result.
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
-}
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
