@@ -2,41 +2,32 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 6hbp192d9ln-mhxgv3se
+**Document ID:** izzlmey3mdd-mi33p3nt
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Go: HTTP Server
+## R: Vector Arithmetic
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+Simple R vector example computing squares of a sequence.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
-}
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
 ```
 
 
 ## Code Example 2
 
-## JavaScript: Sum Array Elements
+## Bash: Count Files
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+Counts files in the current directory using common shell tools.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
