@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 0inay3g7qiys-mi33b3no
+**Document ID:** cc4j845ww6j-mi33gu9g
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,39 +10,25 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## TypeScript: Typed User Model
+## Bash: Count Files
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+Counts files in the current directory using common shell tools.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
-## Kotlin: Data Class Copy
+## Ruby: Word Count
 
-Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```kotlin
-data class User(val id:Int, val name:String, val active:Boolean)
-fun main(){
-  val u1 = User(1, "Ada", true)
-  val u2 = u1.copy(active = false)
-  println(u2)
-}
-```
-
-
-## Swift: Map and Filter
-
-Demonstrates Swift's map and filter on arrays for concise transformation.
-
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
 
