@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** ad9eglljl7f-mi4ox8tp
+**Document ID:** jk6jjm4fx-mi4oyq9v
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,29 +10,14 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Scala: List Pipeline
+## TypeScript: Typed User Model
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
-}
-```
-
-
-## Swift: Map and Filter
-
-Demonstrates Swift's map and filter on arrays for concise transformation.
-
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```typescript
+interface User { id: number; name: string; active: boolean }
+function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
+console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
