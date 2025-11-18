@@ -2,32 +2,43 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** izzlmey3mdd-mi33p3nt
+**Document ID:** nsagvqlenqe-mi4lpbw5
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## R: Vector Arithmetic
+## Rust: Read Lines
 
-Simple R vector example computing squares of a sequence.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
+}
 ```
 
 
 ## Code Example 2
 
-## Bash: Count Files
+## C#: LINQ Query
 
-Counts files in the current directory using common shell tools.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
 ```
 
 
