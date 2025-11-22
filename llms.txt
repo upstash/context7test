@@ -1,0 +1,44 @@
+[Guide](/docs/guide.md)
+[API Documentation](/docs/api.md)
+
+## Haskell: Filter and Map
+
+A minimal Haskell example filtering odd numbers and squaring them.
+
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
+```
+
+
+## SQL: Group and Order
+
+SQL query that groups by name and orders by count descending.
+
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
+```
+
+
+## Java: Stream Map/Filter
+
+Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
+
+```java
+import java.util.*;
+import java.util.stream.*;
+class Main {
+  public static void main(String[] args) {
+    List<Integer> nums = Arrays.asList(1,2,3,4,5);
+    List<Integer> doubledEvens = nums.stream()
+      .filter(n -> n % 2 == 0)
+      .map(n -> n * 2)
+      .collect(Collectors.toList());
+    System.out.println(doubledEvens);
+  }
+}
+```
+
