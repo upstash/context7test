@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** jk5inrk4j1j-mi9b2z50
+**Document ID:** r1ageazmo1-mia6p6ya
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,43 +10,47 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## C#: LINQ Query
+## Go: HTTP Server
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
 }
 ```
 
 
-## PHP: JSON Response
+## Rust: Read Lines
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
+}
 ```
 
 
-## SQL: Group and Order
+## Bash: Count Files
 
-SQL query that groups by name and orders by count descending.
+Counts files in the current directory using common shell tools.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
