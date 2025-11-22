@@ -2,37 +2,38 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** cznhm16z628-mi4p3ruz
+**Document ID:** apsa1y4hfs-mia72ty9
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Python: Fibonacci Generator
+## Scala: List Pipeline
 
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(10)))
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
+}
 ```
 
 
 ## Code Example 2
 
-## Julia: Comprehension
+## Ruby: Word Count
 
-Julia list comprehension generating cubes of a range.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
 
