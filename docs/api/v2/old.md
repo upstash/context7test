@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 7o33fhlah0q-mif7l2a6
+**Document ID:** 9029ajz3cej-mif7m6hr
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -22,19 +22,6 @@ int main(){
   transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
   for (auto n: v) cout<<n<<" ";
   return 0;
-}
-```
-
-
-## Dart: Map Over List
-
-Dart example mapping over a list and printing the result.
-
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
 }
 ```
 
