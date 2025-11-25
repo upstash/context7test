@@ -2,38 +2,32 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** apsa1y4hfs-mia72ty9
+**Document ID:** 7ujfo94tlhf-mif7num9
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Scala: List Pipeline
+## Haskell: Filter and Map
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+A minimal Haskell example filtering odd numbers and squaring them.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
-}
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
 ## Code Example 2
 
-## Ruby: Word Count
+## Julia: Comprehension
 
-Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
+Julia list comprehension generating cubes of a range.
 
-```ruby
-text = "to be or not to be"
-counts = Hash.new(0)
-text.split.each { |w| counts[w] += 1 }
-puts counts
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
 ```
 
 
