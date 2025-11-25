@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** ewe4jyccmp-mif7prob
+**Document ID:** u7auoxlbwyd-mif7pwhg
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,39 +10,34 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## R: Vector Arithmetic
+## Dart: Map Over List
 
-Simple R vector example computing squares of a sequence.
+Dart example mapping over a list and printing the result.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
 ```
 
 
-## TypeScript: Typed User Model
+## Go: HTTP Server
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
-```
-
-
-## Rust: Read Lines
-
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
-
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
 }
 ```
 
