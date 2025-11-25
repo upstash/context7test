@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** ewe4jyccmp-mif7prob
+**Document ID:** 5l4yamotsyn-mif7pro9
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,14 +21,15 @@ print(squares)
 ```
 
 
-## TypeScript: Typed User Model
+## SQL: Group and Order
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+SQL query that groups by name and orders by count descending.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
