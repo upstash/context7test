@@ -2,38 +2,38 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** o6s70c7zai-mifbgt4w
+**Document ID:** oqsvenmzkh-migjv600
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## SQL: Group and Order
+## C++: Transform Vector
 
-SQL query that groups by name and orders by count descending.
+C++ transforms a vector in-place and prints the results.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
+}
 ```
 
 
 ## Code Example 2
 
-## Rust: Read Lines
+## R: Vector Arithmetic
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+Simple R vector example computing squares of a sequence.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
-}
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
 ```
 
 
