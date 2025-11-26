@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** vzjdo56hbl-migell4f
+**Document ID:** jn3sg38gvw-migjfb8z
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,26 +10,27 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Bash: Count Files
+## SQL: Group and Order
 
-Counts files in the current directory using common shell tools.
+SQL query that groups by name and orders by count descending.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
-## Kotlin: Data Class Copy
+## Dart: Map Over List
 
-Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
+Dart example mapping over a list and printing the result.
 
-```kotlin
-data class User(val id:Int, val name:String, val active:Boolean)
-fun main(){
-  val u1 = User(1, "Ada", true)
-  val u2 = u1.copy(active = false)
-  println(u2)
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
 }
 ```
 
