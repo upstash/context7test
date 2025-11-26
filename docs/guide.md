@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** x6u5flgngsr-migekflh
+**Document ID:** deyaeyrtyl4-migekyyc
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -25,23 +25,13 @@ print(list(fib(10)))
 ```
 
 
-## Java: Stream Map/Filter
+## Haskell: Filter and Map
 
-Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
+A minimal Haskell example filtering odd numbers and squaring them.
 
-```java
-import java.util.*;
-import java.util.stream.*;
-class Main {
-  public static void main(String[] args) {
-    List<Integer> nums = Arrays.asList(1,2,3,4,5);
-    List<Integer> doubledEvens = nums.stream()
-      .filter(n -> n % 2 == 0)
-      .map(n -> n * 2)
-      .collect(Collectors.toList());
-    System.out.println(doubledEvens);
-  }
-}
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
