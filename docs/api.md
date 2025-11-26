@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** jn3sg38gvw-migjfb8z
+**Document ID:** ujj1g10e66a-migjgann
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -22,16 +22,14 @@ ORDER BY c DESC;
 ```
 
 
-## Dart: Map Over List
+## Julia: Comprehension
 
-Dart example mapping over a list and printing the result.
+Julia list comprehension generating cubes of a range.
 
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
-}
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
 ```
 
 
