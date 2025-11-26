@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** dx0t0r83jv-mif8v793
+**Document ID:** 8abx0eepm28-mif8z88m
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,40 +10,27 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Scala: List Pipeline
+## Haskell: Filter and Map
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+A minimal Haskell example filtering odd numbers and squaring them.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
+```
+
+
+## Kotlin: Data Class Copy
+
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
+
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
 }
-```
-
-
-## TypeScript: Typed User Model
-
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
-
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
-```
-
-
-## JavaScript: Sum Array Elements
-
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
-
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
 ```
 
 
