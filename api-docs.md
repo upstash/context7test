@@ -2,28 +2,20 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 5jodc4jhpdg-mif81ikg
+**Document ID:** 5z64toxacvv-mif98212
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Go: HTTP Server
+## Julia: Comprehension
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+Julia list comprehension generating cubes of a range.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
-}
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
 ```
 
 
