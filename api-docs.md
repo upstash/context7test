@@ -2,38 +2,32 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** oqsvenmzkh-migjv600
+**Document ID:** 37c897j9tc3-migre85p
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## C++: Transform Vector
+## Elixir: Enum Pipeline
 
-C++ transforms a vector in-place and prints the results.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-  vector<int> v{1,2,3,4,5};
-  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
-  for (auto n: v) cout<<n<<" ";
-  return 0;
-}
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
 ## Code Example 2
 
-## R: Vector Arithmetic
+## Bash: Count Files
 
-Simple R vector example computing squares of a sequence.
+Counts files in the current directory using common shell tools.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
