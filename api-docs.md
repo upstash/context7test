@@ -2,33 +2,36 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** ccdbux4dupf-miiyrj3x
+**Document ID:** 92tid9bt9jg-mijgh8js
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## SQL: Group and Order
+## Python: Fibonacci Generator
 
-SQL query that groups by name and orders by count descending.
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
 ## Code Example 2
 
-## Haskell: Filter and Map
+## Bash: Count Files
 
-A minimal Haskell example filtering odd numbers and squaring them.
+Counts files in the current directory using common shell tools.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
