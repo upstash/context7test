@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** r3682lhehn-mijg66cy
+**Document ID:** fh2omvzxlkg-mijg66cz
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -22,27 +22,14 @@ ORDER BY c DESC;
 ```
 
 
-## Julia: Comprehension
+## JavaScript: Sum Array Elements
 
-Julia list comprehension generating cubes of a range.
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
-```
-
-
-## Dart: Map Over List
-
-Dart example mapping over a list and printing the result.
-
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
-}
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
