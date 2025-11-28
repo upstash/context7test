@@ -2,32 +2,33 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 37c897j9tc3-migre85p
+**Document ID:** ccdbux4dupf-miiyrj3x
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Elixir: Enum Pipeline
+## SQL: Group and Order
 
-Elixir pipeline that filters even numbers and inspects the result.
+SQL query that groups by name and orders by count descending.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
 ## Code Example 2
 
-## Bash: Count Files
+## Haskell: Filter and Map
 
-Counts files in the current directory using common shell tools.
+A minimal Haskell example filtering odd numbers and squaring them.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
