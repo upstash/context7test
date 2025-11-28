@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** ho1bsvoqd1b-miiz5ntn
+**Document ID:** hv3ruoiax4-mijg5hmw
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,43 +10,45 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## R: Vector Arithmetic
+## Elixir: Enum Pipeline
 
-Simple R vector example computing squares of a sequence.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
-## C#: LINQ Query
+## Java: Stream Map/Filter
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
+```java
+import java.util.*;
+import java.util.stream.*;
+class Main {
+  public static void main(String[] args) {
+    List<Integer> nums = Arrays.asList(1,2,3,4,5);
+    List<Integer> doubledEvens = nums.stream()
+      .filter(n -> n % 2 == 0)
+      .map(n -> n * 2)
+      .collect(Collectors.toList());
+    System.out.println(doubledEvens);
   }
 }
 ```
 
 
-## SQL: Group and Order
+## PHP: JSON Response
 
-SQL query that groups by name and orders by count descending.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
