@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** a3955zzx5qg-miiylfpo
+**Document ID:** 25outk3rg7r-miiynain
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,14 +21,14 @@ print(evensDoubled)
 ```
 
 
-## PHP: JSON Response
+## TypeScript: Typed User Model
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```typescript
+interface User { id: number; name: string; active: boolean }
+function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
+console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
