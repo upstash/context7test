@@ -2,36 +2,33 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 92tid9bt9jg-mijgh8js
+**Document ID:** 6b4d0vk9ouc-miktil58
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Python: Fibonacci Generator
+## Julia: Comprehension
 
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+Julia list comprehension generating cubes of a range.
 
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(10)))
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
 ```
 
 
 ## Code Example 2
 
-## Bash: Count Files
+## PHP: JSON Response
 
-Counts files in the current directory using common shell tools.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
