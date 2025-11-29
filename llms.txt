@@ -1,0 +1,35 @@
+[Guide](/docs/guide.md)
+[API Documentation](/docs/api.md)
+
+## Ruby: Word Count
+
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
+
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
+```
+
+
+## R: Vector Arithmetic
+
+Simple R vector example computing squares of a sequence.
+
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
+```
+
+
+## Haskell: Filter and Map
+
+A minimal Haskell example filtering odd numbers and squaring them.
+
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
+```
+
