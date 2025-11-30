@@ -2,7 +2,7 @@
 
 This file is generated for E2E dedup testing.
 
-**Document ID:** y7xlpj6xew-mimbrpd5
+**Document ID:** 3s7zwerr4bp-mimbv8bd
 
 ## Part 1: Getting Started with JavaScript
 
@@ -62,9 +62,9 @@ When working with large datasets, consider using generators or streaming approac
 
 The following example demonstrates array operations in JavaScript using a functional approach.
 
-## JavaScript: Calculate Total with Reduce
+## JavaScript: Sum Array with Reduce
 
-A helper function to calculate the total of numeric arrays using the reduce method. Shows a reusable pattern.
+This snippet demonstrates summing numbers in an array using JavaScript's reduce method. It showcases a functional programming approach.
 
 ```javascript
 function getTotal(arr) {
