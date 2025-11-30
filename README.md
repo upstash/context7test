@@ -2,7 +2,7 @@
 
 This file is generated for E2E dedup testing.
 
-**Document ID:** kdgu1dsgjfr-mimbmh9s
+**Document ID:** 1jhfpc5ojts-mimbphbi
 
 ## Part 1: Getting Started with JavaScript
 
@@ -62,17 +62,14 @@ When working with large datasets, consider using generators or streaming approac
 
 The following example demonstrates array operations in JavaScript using a functional approach.
 
-## JavaScript: Sum Array Elements
+## JavaScript: Array Sum with Reduce
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+This snippet demonstrates summing numbers in an array using reduce. A concise functional approach to array aggregation.
 
 ```javascript
-function sumArray(arr) {
-  return arr.reduce((sum, val) => sum + val, 0);
-}
-
-const numbers = [10, 20, 30, 40];
-console.log(sumArray(numbers)); // 100
+const values = [1, 2, 3, 4, 5];
+const sum = values.reduce((acc, num) => acc + num, 0);
+console.log(sum);
 ```
 
 
