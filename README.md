@@ -1,10 +1,10 @@
-# Dedup Test Document - main
+# Dedup Test Document
 
 This file is generated for E2E dedup testing.
 
-**Document ID:** rtv51ty2ys-mim00s48
+**Document ID:** qyed41t9jds-mim0inzk
 
-This document contains specific code snippets to test deduplication.
+This document contains 3 code snippets where 2 are semantically similar duplicates.
 
 ## JavaScript: Sum Array Elements
 
@@ -14,17 +14,6 @@ This snippet demonstrates summing the numbers in an array using JavaScript's red
 const nums = [1, 2, 3, 4, 5];
 const total = nums.reduce((acc, n) => acc + n, 0);
 console.log(total);
-```
-
-
-## TypeScript: Typed User Model
-
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
-
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
@@ -40,6 +29,17 @@ def fib(n):
         a, b = b, a + b
 
 print(list(fib(10)))
+```
+
+
+## JavaScript: Sum Array Elements
+
+This snippet shows how to sum the numbers in an array using JavaScript's reduce method. It demonstrates a functional programming approach.
+
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((sum, n) => sum + n, 0);
+console.log(total);
 ```
 
 
