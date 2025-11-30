@@ -2,11 +2,11 @@
 
 This file is generated for E2E dedup testing.
 
-**Document ID:** i6dl3hrya98-mim97jx1
+**Document ID:** 8pb8skysn4q-mim9k17u
 
-This document contains 3 code snippets where 2 are semantically similar (duplicates).
+## Part 1: Getting Started with JavaScript
 
-## Section 1: JavaScript Array Sum
+This section covers basic JavaScript operations including array manipulation.
 
 ## JavaScript: Sum Array Elements
 
@@ -19,7 +19,11 @@ console.log(total);
 ```
 
 
-## Section 2: Python Fibonacci
+---
+
+## Part 2: Python Examples
+
+This section contains Python code examples for different use cases.
 
 ## Python: Fibonacci Generator
 
@@ -36,9 +40,27 @@ print(list(fib(10)))
 ```
 
 
-## Section 3: Another JavaScript Sum Example
+---
 
-This is a duplicate of the first example with slightly different wording.
+## Part 3: Advanced Topics
+
+This section contains additional examples and advanced patterns.
+
+### Configuration Management
+
+Before diving into the code examples, ensure your environment is properly configured. Check that all dependencies are installed and your runtime version matches the requirements.
+
+### Error Handling Best Practices
+
+Always wrap your code in try-catch blocks when dealing with external APIs or file operations. This ensures graceful degradation and better user experience.
+
+### Performance Considerations
+
+When working with large datasets, consider using generators or streaming approaches to minimize memory usage.
+
+### Additional Code Examples
+
+The following example demonstrates array operations in JavaScript using a functional approach.
 
 ## JavaScript: Sum Array Elements
 
