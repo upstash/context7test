@@ -2,9 +2,9 @@
 
 This file is generated for E2E dedup testing.
 
-**Document ID:** 8jtzntmp1nm-mim191qw
+**Document ID:** nxzlzsary2-mim1fgy7
 
-This document contains 3 code snippets where 2 are semantically similar duplicates.
+This document contains 2 unique code snippets.
 
 ## JavaScript: Sum Array Elements
 
@@ -29,17 +29,6 @@ def fib(n):
         a, b = b, a + b
 
 print(list(fib(10)))
-```
-
-
-## JavaScript: Sum Array Elements
-
-This snippet shows how to sum the numbers in an array using JavaScript's reduce method. It demonstrates a functional programming approach.
-
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((sum, n) => sum + n, 0);
-console.log(total);
 ```
 
 
