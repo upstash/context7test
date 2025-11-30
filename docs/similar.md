@@ -2,37 +2,29 @@
 
 This file is generated for E2E dedup testing.
 
-**Document ID:** ykv44igmr5-milz6o7f
+**Document ID:** f6dpuqejdif-milz9ivz
 
 This document contains semantically similar code snippets to test deduplication.
 
-## JavaScript: Calculate Array Sum
+## JavaScript: Sum Array Elements
 
-Shows how to calculate the sum of all numbers in an array using a for...of loop. A straightforward iterative approach to array summation.
+This snippet shows how to sum the numbers in an array using JavaScript's reduce method. It demonstrates a functional programming approach.
 
 ```javascript
-const numbers = [1, 2, 3, 4, 5];
-let sum = 0;
-for (const num of numbers) {
-  sum += num;
-}
-console.log(sum);
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((sum, n) => sum + n, 0);
+console.log(total);
 ```
 
 
-## TypeScript: User Type Definition
+## TypeScript: Typed User Model
 
-Defines a User type with id, name and active status fields. Demonstrates how to create and use typed objects in TypeScript.
+This example demonstrates a strongly-typed user interface and a function to format user info. It showcases TypeScript's type safety features.
 
 ```typescript
-type UserType = {
-  id: number;
-  name: string;
-  active: boolean;
-};
-
-const user: UserType = { id: 1, name: 'Ada', active: true };
-console.log(`User: ${user.name} (ID: ${user.id})`);
+interface User { id: number; name: string; active: boolean }
+function formatUser(user: User): string { return `${user.id}:${user.name}:${user.active}` }
+console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
