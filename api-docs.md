@@ -2,33 +2,33 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** tz1na07ferq-mikuryix
+**Document ID:** 6bvd4knb3ya-miqm97zs
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## JavaScript: Sum Array Elements
+## SQL: Group and Order
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+SQL query that groups by name and orders by count descending.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
 ## Code Example 2
 
-## TypeScript: Typed User Model
+## Haskell: Filter and Map
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+A minimal Haskell example filtering odd numbers and squaring them.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
