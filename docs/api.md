@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** zfau6qshrxn-miqai8w0
+**Document ID:** rdz7lbtisos-miqajb6j
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,26 +10,31 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Swift: Map and Filter
+## Scala: List Pipeline
 
-Demonstrates Swift's map and filter on arrays for concise transformation.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
+}
 ```
 
 
-## Dart: Map Over List
+## Kotlin: Data Class Copy
 
-Dart example mapping over a list and printing the result.
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
 
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
 }
 ```
 
