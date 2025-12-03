@@ -1,80 +1,60 @@
-# Dedup Test Document
+# Auto-generated Test Document
 
-This file is generated for E2E dedup testing.
+This file is generated for E2E parsing.
 
-**Document ID:** 3s7zwerr4bp-mimbv8bd
+**Document ID:** oj39j6nra6l-miqai8vy
 
-## Part 1: Getting Started with JavaScript
+This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
-This section covers basic JavaScript operations including array manipulation.
+Each example includes a short description followed by a fenced code block.
 
-## JavaScript: Sum Array Elements
+Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+## C++: Transform Vector
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
-```
+C++ transforms a vector in-place and prints the results.
 
-
----
-
-## Part 2: Python Examples
-
-This section contains Python code examples for different use cases.
-
-## Python: Fibonacci Generator
-
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
-
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(10)))
-```
-
-
----
-
-## Part 3: Advanced Topics
-
-This section contains additional examples and advanced patterns.
-
-### Configuration Management
-
-Before diving into the code examples, ensure your environment is properly configured. Check that all dependencies are installed and your runtime version matches the requirements.
-
-### Error Handling Best Practices
-
-Always wrap your code in try-catch blocks when dealing with external APIs or file operations. This ensures graceful degradation and better user experience.
-
-### Performance Considerations
-
-When working with large datasets, consider using generators or streaming approaches to minimize memory usage.
-
-### Additional Code Examples
-
-The following example demonstrates array operations in JavaScript using a functional approach.
-
-## JavaScript: Sum Array with Reduce
-
-This snippet demonstrates summing numbers in an array using JavaScript's reduce method. It showcases a functional programming approach.
-
-```javascript
-function getTotal(arr) {
-  return arr.reduce(function(prev, curr) {
-    return prev + curr;
-  }, 0);
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
 }
+```
 
-const prices = [29.99, 19.99, 49.99];
-console.log('Total:', getTotal(prices));
+
+## Rust: Read Lines
+
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
+}
+```
+
+
+## C#: LINQ Query
+
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
 ```
 
 
