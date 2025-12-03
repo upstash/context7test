@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** a7o9rwtkm2e-miqlx6p3
+**Document ID:** 6m4r7qpu54u-miqlxp6s
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,43 +10,47 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## R: Vector Arithmetic
+## Java: Stream Map/Filter
 
-Simple R vector example computing squares of a sequence.
+Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
-```
-
-
-## C#: LINQ Query
-
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
-
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
+```java
+import java.util.*;
+import java.util.stream.*;
+class Main {
+  public static void main(String[] args) {
+    List<Integer> nums = Arrays.asList(1,2,3,4,5);
+    List<Integer> doubledEvens = nums.stream()
+      .filter(n -> n % 2 == 0)
+      .map(n -> n * 2)
+      .collect(Collectors.toList());
+    System.out.println(doubledEvens);
   }
 }
 ```
 
 
-## Ruby: Word Count
+## Kotlin: Data Class Copy
 
-Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
 
-```ruby
-text = "to be or not to be"
-counts = Hash.new(0)
-text.split.each { |w| counts[w] += 1 }
-puts counts
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
+}
+```
+
+
+## Haskell: Filter and Map
+
+A minimal Haskell example filtering odd numbers and squaring them.
+
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
