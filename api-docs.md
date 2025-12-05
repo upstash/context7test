@@ -2,33 +2,33 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 6bvd4knb3ya-miqm97zs
+**Document ID:** gjdy7h3qcki-mit8mq3g
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## SQL: Group and Order
+## Swift: Map and Filter
 
-SQL query that groups by name and orders by count descending.
+Demonstrates Swift's map and filter on arrays for concise transformation.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```swift
+let nums = [1,2,3,4,5]
+let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
+print(evensDoubled)
 ```
 
 
 ## Code Example 2
 
-## Haskell: Filter and Map
+## Elixir: Enum Pipeline
 
-A minimal Haskell example filtering odd numbers and squaring them.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
