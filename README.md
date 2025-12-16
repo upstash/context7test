@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** t2ng78wwkki-mj8ykq5l
+**Document ID:** j554pjui39-mj8ykvea
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,25 +21,28 @@ console.log(total);
 ```
 
 
-## TypeScript: Typed User Model
+## Bash: Count Files
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+Counts files in the current directory using common shell tools.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
-## Julia: Comprehension
+## Python: Fibonacci Generator
 
-Julia list comprehension generating cubes of a range.
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
