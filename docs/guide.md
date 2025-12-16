@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** xd784aggioh-mj8ysswp
+**Document ID:** bqjki0qzgw-mj8yvn27
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -22,27 +22,35 @@ puts counts
 ```
 
 
-## JavaScript: Sum Array Elements
+## C#: LINQ Query
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
 ```
 
 
-## Kotlin: Data Class Copy
+## C++: Transform Vector
 
-Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
+C++ transforms a vector in-place and prints the results.
 
-```kotlin
-data class User(val id:Int, val name:String, val active:Boolean)
-fun main(){
-  val u1 = User(1, "Ada", true)
-  val u2 = u1.copy(active = false)
-  println(u2)
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
 }
 ```
 
