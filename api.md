@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 267slfwbqd7-mj8z4ed3
+**Document ID:** bha5qm2d0tg-mj8z6u5h
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -19,18 +19,6 @@ text = "to be or not to be"
 counts = Hash.new(0)
 text.split.each { |w| counts[w] += 1 }
 puts counts
-```
-
-
-## SQL: Group and Order
-
-SQL query that groups by name and orders by count descending.
-
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
 ```
 
 
