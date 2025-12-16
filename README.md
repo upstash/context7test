@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 33dkves2oev-mj8yssvd
+**Document ID:** g00of8k7s6m-mj8ysswo
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,50 +10,41 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## C++: Transform Vector
+## R: Vector Arithmetic
 
-C++ transforms a vector in-place and prints the results.
+Simple R vector example computing squares of a sequence.
 
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-  vector<int> v{1,2,3,4,5};
-  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
-  for (auto n: v) cout<<n<<" ";
-  return 0;
-}
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
 ```
 
 
-## Java: Stream Map/Filter
+## Haskell: Filter and Map
 
-Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
+A minimal Haskell example filtering odd numbers and squaring them.
 
-```java
-import java.util.*;
-import java.util.stream.*;
-class Main {
-  public static void main(String[] args) {
-    List<Integer> nums = Arrays.asList(1,2,3,4,5);
-    List<Integer> doubledEvens = nums.stream()
-      .filter(n -> n % 2 == 0)
-      .map(n -> n * 2)
-      .collect(Collectors.toList());
-    System.out.println(doubledEvens);
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
+```
+
+
+## C#: LINQ Query
+
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
   }
 }
-```
-
-
-## PHP: JSON Response
-
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
-
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
