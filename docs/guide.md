@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** s9qu87ksme7-mj8yreca
+**Document ID:** sjz2jdenzo-mj8yssvf
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -23,27 +23,15 @@ void main() {
 ```
 
 
-## Haskell: Filter and Map
+## SQL: Group and Order
 
-A minimal Haskell example filtering odd numbers and squaring them.
+SQL query that groups by name and orders by count descending.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
-```
-
-
-## Kotlin: Data Class Copy
-
-Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
-
-```kotlin
-data class User(val id:Int, val name:String, val active:Boolean)
-fun main(){
-  val u1 = User(1, "Ada", true)
-  val u2 = u1.copy(active = false)
-  println(u2)
-}
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
