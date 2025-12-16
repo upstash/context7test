@@ -2,20 +2,24 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** gjdy7h3qcki-mit8mq3g
+**Document ID:** kc8q2jgcwtr-mj8ztl8o
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Swift: Map and Filter
+## Scala: List Pipeline
 
-Demonstrates Swift's map and filter on arrays for concise transformation.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
+}
 ```
 
 
