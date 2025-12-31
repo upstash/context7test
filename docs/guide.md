@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** wrk3c7vybu-mjuf8ee9
+**Document ID:** nbvunwbldwh-mjuf95sx
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -22,16 +22,6 @@ def fib(n):
         a, b = b, a + b
 
 print(list(fib(10)))
-```
-
-
-## Bash: Count Files
-
-Counts files in the current directory using common shell tools.
-
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
 ```
 
 
