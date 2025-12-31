@@ -2,11 +2,23 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** kc8q2jgcwtr-mj8ztl8o
+**Document ID:** 11me7dum0fq-mjufd3yh
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
+
+## Bash: Count Files
+
+Counts files in the current directory using common shell tools.
+
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
+```
+
+
+## Code Example 2
 
 ## Scala: List Pipeline
 
@@ -20,19 +32,6 @@ object Main {
     println(oddsSquared)
   }
 }
-```
-
-
-## Code Example 2
-
-## Elixir: Enum Pipeline
-
-Elixir pipeline that filters even numbers and inspects the result.
-
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
 ```
 
 
