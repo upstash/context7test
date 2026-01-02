@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 9d517qv44bc-mjxednyr
+**Document ID:** bzjy960otv-mjxee7el
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,29 +21,13 @@ print(evensDoubled)
 ```
 
 
-## R: Vector Arithmetic
+## Bash: Count Files
 
-Simple R vector example computing squares of a sequence.
+Counts files in the current directory using common shell tools.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
-```
-
-
-## Python: Fibonacci Generator
-
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
-
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(10)))
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
