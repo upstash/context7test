@@ -1,13 +1,18 @@
 [Guide](/docs/guide.md)
 [API Documentation](/docs/api.md)
 
-## Bash: Count Files
+## Rust: Read Lines
 
-Counts files in the current directory using common shell tools.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
+}
 ```
 
 
@@ -22,13 +27,13 @@ console.log(total);
 ```
 
 
-## Julia: Comprehension
+## PHP: JSON Response
 
-Julia list comprehension generating cubes of a range.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
