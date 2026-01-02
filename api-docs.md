@@ -2,45 +2,36 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** pyzgjtersq8-mjxcacvl
+**Document ID:** 93fo5f1830b-mjxer0ye
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Java: Stream Map/Filter
+## Swift: Map and Filter
 
-Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
+Demonstrates Swift's map and filter on arrays for concise transformation.
 
-```java
-import java.util.*;
-import java.util.stream.*;
-class Main {
-  public static void main(String[] args) {
-    List<Integer> nums = Arrays.asList(1,2,3,4,5);
-    List<Integer> doubledEvens = nums.stream()
-      .filter(n -> n % 2 == 0)
-      .map(n -> n * 2)
-      .collect(Collectors.toList());
-    System.out.println(doubledEvens);
-  }
-}
+```swift
+let nums = [1,2,3,4,5]
+let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
+print(evensDoubled)
 ```
 
 
 ## Code Example 2
 
-## Scala: List Pipeline
+## Rust: Read Lines
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
 }
 ```
 
