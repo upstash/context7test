@@ -2,19 +2,29 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 11me7dum0fq-mjufd3yh
+**Document ID:** pyzgjtersq8-mjxcacvl
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Bash: Count Files
+## Java: Stream Map/Filter
 
-Counts files in the current directory using common shell tools.
+Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```java
+import java.util.*;
+import java.util.stream.*;
+class Main {
+  public static void main(String[] args) {
+    List<Integer> nums = Arrays.asList(1,2,3,4,5);
+    List<Integer> doubledEvens = nums.stream()
+      .filter(n -> n % 2 == 0)
+      .map(n -> n * 2)
+      .collect(Collectors.toList());
+    System.out.println(doubledEvens);
+  }
+}
 ```
 
 
