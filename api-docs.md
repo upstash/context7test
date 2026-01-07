@@ -2,37 +2,38 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 93fo5f1830b-mjxer0ye
+**Document ID:** m774u3spdem-mk4jma7v
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Swift: Map and Filter
+## Python: Fibonacci Generator
 
-Demonstrates Swift's map and filter on arrays for concise transformation.
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
 
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
 ## Code Example 2
 
-## Rust: Read Lines
+## Ruby: Word Count
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
-}
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
 
