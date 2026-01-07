@@ -2,38 +2,34 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** m774u3spdem-mk4jma7v
+**Document ID:** if3sv6an5sq-mk4m6z6y
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Python: Fibonacci Generator
+## SQL: Group and Order
 
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+SQL query that groups by name and orders by count descending.
 
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(10)))
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
 ## Code Example 2
 
-## Ruby: Word Count
+## PHP: JSON Response
 
-Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```ruby
-text = "to be or not to be"
-counts = Hash.new(0)
-text.split.each { |w| counts[w] += 1 }
-puts counts
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
