@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 9yndxnm6hb-mk4ov3sl
+**Document ID:** p042mtdepao-mk4oydqz
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,25 +10,25 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## JavaScript: Sum Array Elements
+## R: Vector Arithmetic
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+Simple R vector example computing squares of a sequence.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
 ```
 
 
-## Julia: Comprehension
+## Elixir: Enum Pipeline
 
-Julia list comprehension generating cubes of a range.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
