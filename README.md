@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** sguouoree6-mk5rz3ec
+**Document ID:** tr2t948vlnf-mk5s7wut
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -23,25 +23,15 @@ void main() {
 ```
 
 
-## TypeScript: Typed User Model
+## SQL: Group and Order
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+SQL query that groups by name and orders by count descending.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
-```
-
-
-## R: Vector Arithmetic
-
-Simple R vector example computing squares of a sequence.
-
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
