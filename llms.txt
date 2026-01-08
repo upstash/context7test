@@ -1,17 +1,6 @@
 [Guide](/docs/guide.md)
 [API Documentation](/docs/api.md)
 
-## Swift: Map and Filter
-
-Demonstrates Swift's map and filter on arrays for concise transformation.
-
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
-```
-
-
 ## Bash: Count Files
 
 Counts files in the current directory using common shell tools.
@@ -22,17 +11,26 @@ echo "Files: $FILES"
 ```
 
 
-## Rust: Read Lines
+## PHP: JSON Response
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
+```
+
+
+## Dart: Map Over List
+
+Dart example mapping over a list and printing the result.
+
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
 }
 ```
 
