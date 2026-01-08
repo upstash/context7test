@@ -2,34 +2,37 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** if3sv6an5sq-mk4m6z6y
+**Document ID:** lvn39aixso-mk5c4li0
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## SQL: Group and Order
+## Elixir: Enum Pipeline
 
-SQL query that groups by name and orders by count descending.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
 ## Code Example 2
 
-## PHP: JSON Response
+## Rust: Read Lines
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
+}
 ```
 
 
