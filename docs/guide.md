@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** seiazo1rh9d-mk78g2u1
+**Document ID:** nupw3o9i1c-mk78ml8y
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -20,27 +20,6 @@ void main() {
   final tripled = nums.map((n) => n * 3).toList();
   print(tripled);
 }
-```
-
-
-## Haskell: Filter and Map
-
-A minimal Haskell example filtering odd numbers and squaring them.
-
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
-```
-
-
-## TypeScript: Typed User Model
-
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
-
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
