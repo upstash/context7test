@@ -2,41 +2,41 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** zg8ovw4qno-mk791h33
+**Document ID:** bm3wrffocdt-mk7gyqki
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## JavaScript: Sum Array Elements
+## C++: Transform Vector
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+C++ transforms a vector in-place and prints the results.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
+}
 ```
 
 
 ## Code Example 2
 
-## Java: Stream Map/Filter
+## Rust: Read Lines
 
-Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```java
-import java.util.*;
-import java.util.stream.*;
-class Main {
-  public static void main(String[] args) {
-    List<Integer> nums = Arrays.asList(1,2,3,4,5);
-    List<Integer> doubledEvens = nums.stream()
-      .filter(n -> n % 2 == 0)
-      .map(n -> n * 2)
-      .collect(Collectors.toList());
-    System.out.println(doubledEvens);
-  }
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
 }
 ```
 
