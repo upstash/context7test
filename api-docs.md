@@ -2,45 +2,33 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** p113o9al6da-mk5t0mks
+**Document ID:** pc3i9ixec-mk6sut4n
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Java: Stream Map/Filter
+## Elixir: Enum Pipeline
 
-Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```java
-import java.util.*;
-import java.util.stream.*;
-class Main {
-  public static void main(String[] args) {
-    List<Integer> nums = Arrays.asList(1,2,3,4,5);
-    List<Integer> doubledEvens = nums.stream()
-      .filter(n -> n % 2 == 0)
-      .map(n -> n * 2)
-      .collect(Collectors.toList());
-    System.out.println(doubledEvens);
-  }
-}
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
 ## Code Example 2
 
-## Kotlin: Data Class Copy
+## R: Vector Arithmetic
 
-Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
+Simple R vector example computing squares of a sequence.
 
-```kotlin
-data class User(val id:Int, val name:String, val active:Boolean)
-fun main(){
-  val u1 = User(1, "Ada", true)
-  val u2 = u1.copy(active = false)
-  println(u2)
-}
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
 ```
 
 
