@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** jqzuclyzwdn-mk78g2so
+**Document ID:** seiazo1rh9d-mk78g2u1
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,30 +10,37 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Scala: List Pipeline
+## Dart: Map Over List
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+Dart example mapping over a list and printing the result.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
 }
 ```
 
 
-## SQL: Group and Order
+## Haskell: Filter and Map
 
-SQL query that groups by name and orders by count descending.
+A minimal Haskell example filtering odd numbers and squaring them.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
+```
+
+
+## TypeScript: Typed User Model
+
+This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+
+```typescript
+interface User { id: number; name: string; active: boolean }
+function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
+console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
