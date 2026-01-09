@@ -2,33 +2,33 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** pc3i9ixec-mk6sut4n
+**Document ID:** mbqlfhi0qqp-mk6vgv13
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Elixir: Enum Pipeline
+## JavaScript: Sum Array Elements
 
-Elixir pipeline that filters even numbers and inspects the result.
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
 ## Code Example 2
 
-## R: Vector Arithmetic
+## Swift: Map and Filter
 
-Simple R vector example computing squares of a sequence.
+Demonstrates Swift's map and filter on arrays for concise transformation.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```swift
+let nums = [1,2,3,4,5]
+let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
+print(evensDoubled)
 ```
 
 
