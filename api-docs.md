@@ -2,33 +2,33 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** mbqlfhi0qqp-mk6vgv13
+**Document ID:** 260bc8afcgs-mk6yadqk
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## JavaScript: Sum Array Elements
+## PHP: JSON Response
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
 ## Code Example 2
 
-## Swift: Map and Filter
+## Julia: Comprehension
 
-Demonstrates Swift's map and filter on arrays for concise transformation.
+Julia list comprehension generating cubes of a range.
 
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
 ```
 
 
