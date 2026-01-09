@@ -2,33 +2,42 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 260bc8afcgs-mk6yadqk
+**Document ID:** zg8ovw4qno-mk791h33
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## PHP: JSON Response
+## JavaScript: Sum Array Elements
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
 ## Code Example 2
 
-## Julia: Comprehension
+## Java: Stream Map/Filter
 
-Julia list comprehension generating cubes of a range.
+Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```java
+import java.util.*;
+import java.util.stream.*;
+class Main {
+  public static void main(String[] args) {
+    List<Integer> nums = Arrays.asList(1,2,3,4,5);
+    List<Integer> doubledEvens = nums.stream()
+      .filter(n -> n % 2 == 0)
+      .map(n -> n * 2)
+      .collect(Collectors.toList());
+    System.out.println(doubledEvens);
+  }
+}
 ```
 
 
