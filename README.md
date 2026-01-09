@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** vzqmltwm72a-mk6s8j73
+**Document ID:** 5ob4fphmn52-mk6sc5v7
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,39 +10,28 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## TypeScript: Typed User Model
+## Dart: Map Over List
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+Dart example mapping over a list and printing the result.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
 ```
 
 
-## Python: Fibonacci Generator
+## SQL: Group and Order
 
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+SQL query that groups by name and orders by count descending.
 
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(10)))
-```
-
-
-## Haskell: Filter and Map
-
-A minimal Haskell example filtering odd numbers and squaring them.
-
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
