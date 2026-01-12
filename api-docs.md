@@ -2,35 +2,39 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** j7xa74ulcxi-mkbqrcs3
+**Document ID:** rxxvzfvd2o-mkbrc8p1
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Kotlin: Data Class Copy
+## Rust: Read Lines
 
-Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```kotlin
-data class User(val id:Int, val name:String, val active:Boolean)
-fun main(){
-  val u1 = User(1, "Ada", true)
-  val u2 = u1.copy(active = false)
-  println(u2)
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
 }
 ```
 
 
 ## Code Example 2
 
-## Haskell: Filter and Map
+## Dart: Map Over List
 
-A minimal Haskell example filtering odd numbers and squaring them.
+Dart example mapping over a list and printing the result.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
 ```
 
 
