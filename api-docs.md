@@ -2,39 +2,34 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** rxxvzfvd2o-mkbrc8p1
+**Document ID:** isqca418km-mkbtbzqa
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Rust: Read Lines
+## Julia: Comprehension
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+Julia list comprehension generating cubes of a range.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
-}
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
 ```
 
 
 ## Code Example 2
 
-## Dart: Map Over List
+## Ruby: Word Count
 
-Dart example mapping over a list and printing the result.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
-}
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
 
