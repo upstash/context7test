@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 2a4xt16ttg8-mkbt0bjn
+**Document ID:** ked4ls72co-mkbt106j
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,35 +10,42 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Swift: Map and Filter
+## Elixir: Enum Pipeline
 
-Demonstrates Swift's map and filter on arrays for concise transformation.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
-## Julia: Comprehension
+## TypeScript: Typed User Model
 
-Julia list comprehension generating cubes of a range.
+This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```typescript
+interface User { id: number; name: string; active: boolean }
+function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
+console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
-## Haskell: Filter and Map
+## C#: LINQ Query
 
-A minimal Haskell example filtering odd numbers and squaring them.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
 ```
 
 
