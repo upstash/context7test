@@ -2,34 +2,38 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** isqca418km-mkbtbzqa
+**Document ID:** 2odhd174lkg-mkbxn75a
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Julia: Comprehension
+## Kotlin: Data Class Copy
 
-Julia list comprehension generating cubes of a range.
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
+}
 ```
 
 
 ## Code Example 2
 
-## Ruby: Word Count
+## Dart: Map Over List
 
-Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
+Dart example mapping over a list and printing the result.
 
-```ruby
-text = "to be or not to be"
-counts = Hash.new(0)
-text.split.each { |w| counts[w] += 1 }
-puts counts
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
 ```
 
 
