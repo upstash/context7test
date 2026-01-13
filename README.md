@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** a7cjl1y5jgd-mkbtyrse
+**Document ID:** 2bdy7nwcaj9-mkbu0sxd
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,38 +10,46 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Julia: Comprehension
+## SQL: Group and Order
 
-Julia list comprehension generating cubes of a range.
+SQL query that groups by name and orders by count descending.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
-## Dart: Map Over List
+## Kotlin: Data Class Copy
 
-Dart example mapping over a list and printing the result.
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
 
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
 }
 ```
 
 
-## PHP: JSON Response
+## C#: LINQ Query
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
 ```
 
 
