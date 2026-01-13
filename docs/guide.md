@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 1x05u7z5iby-mkbxaoty
+**Document ID:** abrl0i3a9ye-mkbxaovm
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,35 +10,35 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Scala: List Pipeline
+## Haskell: Filter and Map
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+A minimal Haskell example filtering odd numbers and squaring them.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
-}
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
-## C#: LINQ Query
+## R: Vector Arithmetic
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+Simple R vector example computing squares of a sequence.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
-}
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
+```
+
+
+## JavaScript: Sum Array Elements
+
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
