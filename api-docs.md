@@ -2,38 +2,37 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 2odhd174lkg-mkbxn75a
+**Document ID:** 55yel8508gh-mkgq3jum
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Kotlin: Data Class Copy
+## R: Vector Arithmetic
 
-Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
+Simple R vector example computing squares of a sequence.
 
-```kotlin
-data class User(val id:Int, val name:String, val active:Boolean)
-fun main(){
-  val u1 = User(1, "Ada", true)
-  val u2 = u1.copy(active = false)
-  println(u2)
-}
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
 ```
 
 
 ## Code Example 2
 
-## Dart: Map Over List
+## Python: Fibonacci Generator
 
-Dart example mapping over a list and printing the result.
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
 
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
-}
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
