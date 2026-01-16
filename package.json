@@ -1,0 +1,9 @@
+{
+  "name": "test-calculator",
+  "version": "1.0.0",
+  "description": "A test project with code but no documentation",
+  "main": "src/calculator.ts",
+  "scripts": {
+    "test": "echo \"No tests\""
+  }
+}
