@@ -2,37 +2,38 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** mg17oxx74xg-mkl4e3wq
+**Document ID:** qlewlgefml-mklrgbn7
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## PHP: JSON Response
+## C++: Transform Vector
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+C++ transforms a vector in-place and prints the results.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
+}
 ```
 
 
 ## Code Example 2
 
-## Rust: Read Lines
+## Elixir: Enum Pipeline
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
-}
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
