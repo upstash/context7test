@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** ck49jpgv6a-mkl0iusy
+**Document ID:** an7y0j3cn7t-mkl0jeip
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,37 +10,31 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## TypeScript: Typed User Model
+## Dart: Map Over List
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+Dart example mapping over a list and printing the result.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
 ```
 
 
-## JavaScript: Sum Array Elements
+## Python: Fibonacci Generator
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
-```
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
 
-
-## Ruby: Word Count
-
-Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
-
-```ruby
-text = "to be or not to be"
-counts = Hash.new(0)
-text.split.each { |w| counts[w] += 1 }
-puts counts
+print(list(fib(10)))
 ```
 
 
