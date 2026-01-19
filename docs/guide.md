@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** c4z83kgi7c5-mkl4m1pg
+**Document ID:** qhtmx9p81di-mklqkf8j
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,27 +21,33 @@ IO.inspect(evens)
 ```
 
 
-## Julia: Comprehension
+## Python: Fibonacci Generator
 
-Julia list comprehension generating cubes of a range.
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
-## Kotlin: Data Class Copy
+## C++: Transform Vector
 
-Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
+C++ transforms a vector in-place and prints the results.
 
-```kotlin
-data class User(val id:Int, val name:String, val active:Boolean)
-fun main(){
-  val u1 = User(1, "Ada", true)
-  val u2 = u1.copy(active = false)
-  println(u2)
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
 }
 ```
 
