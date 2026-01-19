@@ -1,0 +1,44 @@
+[Guide](/docs/guide.md)
+[API Documentation](/docs/api.md)
+
+## Java: Stream Map/Filter
+
+Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
+
+```java
+import java.util.*;
+import java.util.stream.*;
+class Main {
+  public static void main(String[] args) {
+    List<Integer> nums = Arrays.asList(1,2,3,4,5);
+    List<Integer> doubledEvens = nums.stream()
+      .filter(n -> n % 2 == 0)
+      .map(n -> n * 2)
+      .collect(Collectors.toList());
+    System.out.println(doubledEvens);
+  }
+}
+```
+
+
+## R: Vector Arithmetic
+
+Simple R vector example computing squares of a sequence.
+
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
+```
+
+
+## Elixir: Enum Pipeline
+
+Elixir pipeline that filters even numbers and inspects the result.
+
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
+```
+
