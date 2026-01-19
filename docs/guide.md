@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** x9a4rb9thte-mklqmaup
+**Document ID:** 3qkn2iw0i8d-mklqmawg
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,31 +10,41 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## C#: LINQ Query
+## JavaScript: Sum Array Elements
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
-}
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
-## TypeScript: Typed User Model
+## SQL: Group and Order
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+SQL query that groups by name and orders by count descending.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
+```
+
+
+## Scala: List Pipeline
+
+Uses Scala collections to filter and map a list with a clear pipeline.
+
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
+}
 ```
 
 
