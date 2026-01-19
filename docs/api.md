@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** ues8ug79r7-mklseo85
+**Document ID:** nlv3blb6sd-mklshlaq
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,23 +21,15 @@ print(evensDoubled)
 ```
 
 
-## Java: Stream Map/Filter
+## Ruby: Word Count
 
-Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```java
-import java.util.*;
-import java.util.stream.*;
-class Main {
-  public static void main(String[] args) {
-    List<Integer> nums = Arrays.asList(1,2,3,4,5);
-    List<Integer> doubledEvens = nums.stream()
-      .filter(n -> n % 2 == 0)
-      .map(n -> n * 2)
-      .collect(Collectors.toList());
-    System.out.println(doubledEvens);
-  }
-}
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
 
