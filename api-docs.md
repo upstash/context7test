@@ -2,37 +2,38 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 55yel8508gh-mkgq3jum
+**Document ID:** upla2wprpn-mkl0vigi
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## R: Vector Arithmetic
+## PHP: JSON Response
 
-Simple R vector example computing squares of a sequence.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
 ## Code Example 2
 
-## Python: Fibonacci Generator
+## C++: Transform Vector
 
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+C++ transforms a vector in-place and prints the results.
 
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(10)))
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
+}
 ```
 
 
