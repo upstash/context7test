@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** we7dast2bm-mkl49e0p
+**Document ID:** thef4htm2ys-mkl4a5wi
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -19,25 +19,6 @@ void main() {
   final nums = [1,2,3,4,5];
   final tripled = nums.map((n) => n * 3).toList();
   print(tripled);
-}
-```
-
-
-## Go: HTTP Server
-
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
-
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
 }
 ```
 
