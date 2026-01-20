@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** cuue18wm4a-mkn16b09
+**Document ID:** k32eauhvy9b-mkn1k25k
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,25 +10,37 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## R: Vector Arithmetic
+## Go: HTTP Server
 
-Simple R vector example computing squares of a sequence.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
+}
 ```
 
 
-## Elixir: Enum Pipeline
+## Scala: List Pipeline
 
-Elixir pipeline that filters even numbers and inspects the result.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
+}
 ```
 
 
