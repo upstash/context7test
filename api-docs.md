@@ -2,38 +2,33 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** qlewlgefml-mklrgbn7
+**Document ID:** 186mtvkz20i-mko2kdxm
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## C++: Transform Vector
+## SQL: Group and Order
 
-C++ transforms a vector in-place and prints the results.
+SQL query that groups by name and orders by count descending.
 
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-  vector<int> v{1,2,3,4,5};
-  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
-  for (auto n: v) cout<<n<<" ";
-  return 0;
-}
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
 ## Code Example 2
 
-## Elixir: Enum Pipeline
+## Bash: Count Files
 
-Elixir pipeline that filters even numbers and inspects the result.
+Counts files in the current directory using common shell tools.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
