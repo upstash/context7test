@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** le473jye18a-mko5iej5
+**Document ID:** 997yw0967ov-mko5this
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -20,22 +20,6 @@ fun main(){
   val u1 = User(1, "Ada", true)
   val u2 = u1.copy(active = false)
   println(u2)
-}
-```
-
-
-## C++: Transform Vector
-
-C++ transforms a vector in-place and prints the results.
-
-```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main(){
-  vector<int> v{1,2,3,4,5};
-  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
-  for (auto n: v) cout<<n<<" ";
-  return 0;
 }
 ```
 
