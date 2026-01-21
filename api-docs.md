@@ -2,33 +2,34 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 186mtvkz20i-mko2kdxm
+**Document ID:** 4r6q4pzpujq-mko6hwfd
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## SQL: Group and Order
+## Haskell: Filter and Map
 
-SQL query that groups by name and orders by count descending.
+A minimal Haskell example filtering odd numbers and squaring them.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
 ## Code Example 2
 
-## Bash: Count Files
+## Dart: Map Over List
 
-Counts files in the current directory using common shell tools.
+Dart example mapping over a list and printing the result.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
 ```
 
 
