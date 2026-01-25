@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** i4qo6qfc12b-mku6rlmj
+**Document ID:** iw0kree9fcs-mku6t92q
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -29,6 +29,17 @@ SELECT name, COUNT(*) AS c
 FROM users
 GROUP BY name
 ORDER BY c DESC;
+```
+
+
+## TypeScript: Typed User Model
+
+This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+
+```typescript
+interface User { id: number; name: string; active: boolean }
+function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
+console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
