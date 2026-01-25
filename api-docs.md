@@ -2,11 +2,24 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 4r6q4pzpujq-mko6hwfd
+**Document ID:** gbm3ventsx4-mkt1uelc
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
+
+## TypeScript: Typed User Model
+
+This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+
+```typescript
+interface User { id: number; name: string; active: boolean }
+function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
+console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```
+
+
+## Code Example 2
 
 ## Haskell: Filter and Map
 
@@ -15,21 +28,6 @@ A minimal Haskell example filtering odd numbers and squaring them.
 ```haskell
 main :: IO ()
 main = print $ map (^2) $ filter odd [1..10]
-```
-
-
-## Code Example 2
-
-## Dart: Map Over List
-
-Dart example mapping over a list and printing the result.
-
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
-}
 ```
 
 
