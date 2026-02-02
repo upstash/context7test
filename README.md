@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 7hjmxe8cvgb-ml525ekw
+**Document ID:** x9avuo7qccl-ml526qgv
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,25 +21,29 @@ console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
-## SQL: Group and Order
+## Kotlin: Data Class Copy
 
-SQL query that groups by name and orders by count descending.
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
+}
 ```
 
 
-## Bash: Count Files
+## Ruby: Word Count
 
-Counts files in the current directory using common shell tools.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
 
