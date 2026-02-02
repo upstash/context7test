@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** k623f4x5i7s-ml52ikqt
+**Document ID:** kekqchzlx4-ml52jfsx
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -20,14 +20,33 @@ main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
-## Elixir: Enum Pipeline
+## Scala: List Pipeline
 
-Elixir pipeline that filters even numbers and inspects the result.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
+}
+```
+
+
+## Rust: Read Lines
+
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
+}
 ```
 
 
