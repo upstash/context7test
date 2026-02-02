@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** kekqchzlx4-ml52jfsx
+**Document ID:** qb016axp2jg-ml52k7w7
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,43 +10,37 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Haskell: Filter and Map
+## SQL: Group and Order
 
-A minimal Haskell example filtering odd numbers and squaring them.
+SQL query that groups by name and orders by count descending.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
-## Scala: List Pipeline
+## Julia: Comprehension
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+Julia list comprehension generating cubes of a range.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
-}
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
 ```
 
 
-## Rust: Read Lines
+## Swift: Map and Filter
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+Demonstrates Swift's map and filter on arrays for concise transformation.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
-}
+```swift
+let nums = [1,2,3,4,5]
+let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
+print(evensDoubled)
 ```
 
 
