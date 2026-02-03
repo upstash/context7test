@@ -2,20 +2,24 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 63595sawaf3-ml6d30py
+**Document ID:** lve7h7jtli8-ml6hwrmf
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## PHP: JSON Response
+## Rust: Read Lines
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
+}
 ```
 
 
