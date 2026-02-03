@@ -1,0 +1,41 @@
+[Guide](/docs/guide.md)
+[API Documentation](/docs/api.md)
+
+## C#: LINQ Query
+
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
+```
+
+
+## R: Vector Arithmetic
+
+Simple R vector example computing squares of a sequence.
+
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
+```
+
+
+## JavaScript: Sum Array Elements
+
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
+```
+
