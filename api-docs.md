@@ -2,32 +2,39 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** gbm3ventsx4-mkt1uelc
+**Document ID:** 63595sawaf3-ml6d30py
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## TypeScript: Typed User Model
+## PHP: JSON Response
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
 ## Code Example 2
 
-## Haskell: Filter and Map
+## C#: LINQ Query
 
-A minimal Haskell example filtering odd numbers and squaring them.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
 ```
 
 
