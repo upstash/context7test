@@ -1,0 +1,35 @@
+[Guide](/docs/guide.md)
+[API Documentation](/docs/api.md)
+
+## Haskell: Filter and Map
+
+A minimal Haskell example filtering odd numbers and squaring them.
+
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
+```
+
+
+## SQL: Group and Order
+
+SQL query that groups by name and orders by count descending.
+
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
+```
+
+
+## R: Vector Arithmetic
+
+Simple R vector example computing squares of a sequence.
+
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
+```
+
