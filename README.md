@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** et04jq1ihlt-mlgb7kqm
+**Document ID:** hf8kr9l8557-mlgb7krz
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,49 +10,36 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Python: Fibonacci Generator
+## R: Vector Arithmetic
 
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+Simple R vector example computing squares of a sequence.
 
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(10)))
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
 ```
 
 
-## PHP: JSON Response
+## SQL: Group and Order
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+SQL query that groups by name and orders by count descending.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
-## Java: Stream Map/Filter
+## Haskell: Filter and Map
 
-Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
+A minimal Haskell example filtering odd numbers and squaring them.
 
-```java
-import java.util.*;
-import java.util.stream.*;
-class Main {
-  public static void main(String[] args) {
-    List<Integer> nums = Arrays.asList(1,2,3,4,5);
-    List<Integer> doubledEvens = nums.stream()
-      .filter(n -> n % 2 == 0)
-      .map(n -> n * 2)
-      .collect(Collectors.toList());
-    System.out.println(doubledEvens);
-  }
-}
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
