@@ -2,39 +2,40 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 1xixwd1ln1q-mla8pr0s
+**Document ID:** 7aek32b2ltj-mlgblkeg
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## C#: LINQ Query
+## Kotlin: Data Class Copy
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
 }
 ```
 
 
 ## Code Example 2
 
-## Swift: Map and Filter
+## Scala: List Pipeline
 
-Demonstrates Swift's map and filter on arrays for concise transformation.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
+}
 ```
 
 
