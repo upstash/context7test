@@ -2,11 +2,32 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 7aek32b2ltj-mlgblkeg
+**Document ID:** 1a95ru3e2ey-mlpako5y
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
+
+## Go: HTTP Server
+
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
+}
+```
+
+
+## Code Example 2
 
 ## Kotlin: Data Class Copy
 
@@ -18,23 +39,6 @@ fun main(){
   val u1 = User(1, "Ada", true)
   val u2 = u1.copy(active = false)
   println(u2)
-}
-```
-
-
-## Code Example 2
-
-## Scala: List Pipeline
-
-Uses Scala collections to filter and map a list with a clear pipeline.
-
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
 }
 ```
 
