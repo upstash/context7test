@@ -2,33 +2,35 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** m534pdbe1j-mlr4tj59
+**Document ID:** p7i4xfpkq4-mlr6nf44
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Elixir: Enum Pipeline
+## R: Vector Arithmetic
 
-Elixir pipeline that filters even numbers and inspects the result.
+Simple R vector example computing squares of a sequence.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
 ```
 
 
 ## Code Example 2
 
-## PHP: JSON Response
+## Dart: Map Over List
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+Dart example mapping over a list and printing the result.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
 ```
 
 
