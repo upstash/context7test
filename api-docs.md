@@ -2,44 +2,33 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 1a95ru3e2ey-mlpako5y
+**Document ID:** m534pdbe1j-mlr4tj59
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Go: HTTP Server
+## Elixir: Enum Pipeline
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
-}
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
 ## Code Example 2
 
-## Kotlin: Data Class Copy
+## PHP: JSON Response
 
-Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```kotlin
-data class User(val id:Int, val name:String, val active:Boolean)
-fun main(){
-  val u1 = User(1, "Ada", true)
-  val u2 = u1.copy(active = false)
-  println(u2)
-}
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
