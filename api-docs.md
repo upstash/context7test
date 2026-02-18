@@ -2,39 +2,32 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 8gnvk0st6x-mlrbujva
+**Document ID:** sr98ybatf1-mls5o5b7
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## C#: LINQ Query
+## Haskell: Filter and Map
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+A minimal Haskell example filtering odd numbers and squaring them.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
-}
+```haskell
+main :: IO ()
+main = print $ map (^2) $ filter odd [1..10]
 ```
 
 
 ## Code Example 2
 
-## JavaScript: Sum Array Elements
+## Swift: Map and Filter
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+Demonstrates Swift's map and filter on arrays for concise transformation.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
+```swift
+let nums = [1,2,3,4,5]
+let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
+print(evensDoubled)
 ```
 
 
