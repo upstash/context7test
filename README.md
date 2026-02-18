@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 1317822s6dda-mls5cf8j
+**Document ID:** 0zgcrfjvr2p-mls5g6di
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -25,34 +25,18 @@ fn main(){
 ```
 
 
-## Go: HTTP Server
+## Scala: List Pipeline
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
 }
-```
-
-
-## Ruby: Word Count
-
-Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
-
-```ruby
-text = "to be or not to be"
-counts = Hash.new(0)
-text.split.each { |w| counts[w] += 1 }
-puts counts
 ```
 
 
