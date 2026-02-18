@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** qety1zhsdl-mls5cf79
+**Document ID:** 1317822s6dda-mls5cf8j
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,46 +10,49 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## C#: LINQ Query
+## Rust: Read Lines
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
 }
 ```
 
 
-## Swift: Map and Filter
+## Go: HTTP Server
 
-Demonstrates Swift's map and filter on arrays for concise transformation.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
+}
 ```
 
 
-## Python: Fibonacci Generator
+## Ruby: Word Count
 
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(10)))
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
 
