@@ -1,0 +1,40 @@
+[Guide](/docs/guide.md)
+[API Documentation](/docs/api.md)
+
+## Bash: Count Files
+
+Counts files in the current directory using common shell tools.
+
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
+```
+
+
+## TypeScript: Typed User Model
+
+This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+
+```typescript
+interface User { id: number; name: string; active: boolean }
+function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
+console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```
+
+
+## C#: LINQ Query
+
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
+```
+
