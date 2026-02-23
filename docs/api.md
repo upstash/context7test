@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** dg3933s2wse-mlyztfxz
+**Document ID:** 6uvvn1nu74a-mlyzwtuy
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -23,17 +23,6 @@ int main(){
   for (auto n: v) cout<<n<<" ";
   return 0;
 }
-```
-
-
-## Elixir: Enum Pipeline
-
-Elixir pipeline that filters even numbers and inspects the result.
-
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
 ```
 
 
