@@ -2,46 +2,34 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** xxmjg306xz-mluvi9e1
+**Document ID:** e14ipbck27-mlz03sez
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Rust: Read Lines
+## SQL: Group and Order
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+SQL query that groups by name and orders by count descending.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
-}
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
 ## Code Example 2
 
-## Java: Stream Map/Filter
+## JavaScript: Sum Array Elements
 
-Shows Java streams to map and filter a list, producing a concise pipeline. Demonstrates modern Java idioms.
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-```java
-import java.util.*;
-import java.util.stream.*;
-class Main {
-  public static void main(String[] args) {
-    List<Integer> nums = Arrays.asList(1,2,3,4,5);
-    List<Integer> doubledEvens = nums.stream()
-      .filter(n -> n % 2 == 0)
-      .map(n -> n * 2)
-      .collect(Collectors.toList());
-    System.out.println(doubledEvens);
-  }
-}
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
