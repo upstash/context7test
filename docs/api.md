@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 48coo16wqku-mlzx7umz
+**Document ID:** j8oze5jmk5-mm0lzjcz
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,15 +21,22 @@ println(cubes)
 ```
 
 
-## SQL: Group and Order
+## Go: HTTP Server
 
-SQL query that groups by name and orders by count descending.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
+}
 ```
 
 
