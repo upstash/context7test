@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** lb5x0d9uy2f-mlzwl2o1
+**Document ID:** s8ppg1kx8ep-mlzwl2p9
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,29 +10,37 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Scala: List Pipeline
+## Julia: Comprehension
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+Julia list comprehension generating cubes of a range.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
-}
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
 ```
 
 
-## TypeScript: Typed User Model
+## Elixir: Enum Pipeline
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
+```
+
+
+## Ruby: Word Count
+
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
+
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
 
