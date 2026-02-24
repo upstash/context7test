@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 7oyr94s6q0q-mm0m01kn
+**Document ID:** csu403200br-mm0m3oit
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -25,25 +25,15 @@ object Main {
 ```
 
 
-## Elixir: Enum Pipeline
+## SQL: Group and Order
 
-Elixir pipeline that filters even numbers and inspects the result.
+SQL query that groups by name and orders by count descending.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
-```
-
-
-## R: Vector Arithmetic
-
-Simple R vector example computing squares of a sequence.
-
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
