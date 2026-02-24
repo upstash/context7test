@@ -2,34 +2,37 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** e14ipbck27-mlz03sez
+**Document ID:** y4svvr0wl4e-mlzwy7uw
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## SQL: Group and Order
+## Scala: List Pipeline
 
-SQL query that groups by name and orders by count descending.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
+}
 ```
 
 
 ## Code Example 2
 
-## JavaScript: Sum Array Elements
+## Julia: Comprehension
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+Julia list comprehension generating cubes of a range.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
 ```
 
 
