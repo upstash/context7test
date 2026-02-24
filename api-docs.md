@@ -2,37 +2,34 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** y4svvr0wl4e-mlzwy7uw
+**Document ID:** xx9sjp6aqx-mm0mb8pd
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Scala: List Pipeline
+## Swift: Map and Filter
 
-Uses Scala collections to filter and map a list with a clear pipeline.
+Demonstrates Swift's map and filter on arrays for concise transformation.
 
-```scala
-object Main {
-  def main(args: Array[String]): Unit = {
-    val nums = List(1,2,3,4,5)
-    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
-    println(oddsSquared)
-  }
-}
+```swift
+let nums = [1,2,3,4,5]
+let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
+print(evensDoubled)
 ```
 
 
 ## Code Example 2
 
-## Julia: Comprehension
+## SQL: Group and Order
 
-Julia list comprehension generating cubes of a range.
+SQL query that groups by name and orders by count descending.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
