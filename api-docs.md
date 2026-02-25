@@ -2,34 +2,39 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** xx9sjp6aqx-mm0mb8pd
+**Document ID:** x6h0mxf04ji-mm1vopgu
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Swift: Map and Filter
+## R: Vector Arithmetic
 
-Demonstrates Swift's map and filter on arrays for concise transformation.
+Simple R vector example computing squares of a sequence.
 
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
 ```
 
 
 ## Code Example 2
 
-## SQL: Group and Order
+## C#: LINQ Query
 
-SQL query that groups by name and orders by count descending.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
 ```
 
 
