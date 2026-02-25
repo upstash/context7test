@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** fwdqstlc8vl-mm0mktc7
+**Document ID:** ay6yrikkhra-mm1vcr8y
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,14 +21,20 @@ println(cubes)
 ```
 
 
-## Elixir: Enum Pipeline
+## C#: LINQ Query
 
-Elixir pipeline that filters even numbers and inspects the result.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
 ```
 
 
