@@ -2,38 +2,44 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** x6h0mxf04ji-mm1vopgu
+**Document ID:** 81xz2ogkka-mm467nnm
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## R: Vector Arithmetic
+## Rust: Read Lines
 
-Simple R vector example computing squares of a sequence.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
+}
 ```
 
 
 ## Code Example 2
 
-## C#: LINQ Query
+## Go: HTTP Server
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
 }
 ```
 
