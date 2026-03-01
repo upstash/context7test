@@ -2,45 +2,32 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 81xz2ogkka-mm467nnm
+**Document ID:** uhb7irmssbc-mm8bhesw
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Rust: Read Lines
+## PHP: JSON Response
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
-}
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
 ## Code Example 2
 
-## Go: HTTP Server
+## Bash: Count Files
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+Counts files in the current directory using common shell tools.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
-}
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
