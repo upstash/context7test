@@ -2,37 +2,43 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 7q2y0gk6ogg-mmdcemiy
+**Document ID:** leu1h34mk1l-mme4174k
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Python: Fibonacci Generator
+## Rust: Read Lines
 
-A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```python
-def fib(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a, b = b, a + b
-
-print(list(fib(10)))
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
+}
 ```
 
 
 ## Code Example 2
 
-## Elixir: Enum Pipeline
+## C#: LINQ Query
 
-Elixir pipeline that filters even numbers and inspects the result.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
+}
 ```
 
 
