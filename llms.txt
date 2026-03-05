@@ -1,0 +1,43 @@
+[Guide](/docs/guide.md)
+[API Documentation](/docs/api.md)
+
+## PHP: JSON Response
+
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
+```
+
+
+## Scala: List Pipeline
+
+Uses Scala collections to filter and map a list with a clear pipeline.
+
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
+}
+```
+
+
+## Python: Fibonacci Generator
+
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
+
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
+```
+
