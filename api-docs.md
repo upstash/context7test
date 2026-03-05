@@ -2,32 +2,37 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** uhb7irmssbc-mm8bhesw
+**Document ID:** 7q2y0gk6ogg-mmdcemiy
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## PHP: JSON Response
+## Python: Fibonacci Generator
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
 ## Code Example 2
 
-## Bash: Count Files
+## Elixir: Enum Pipeline
 
-Counts files in the current directory using common shell tools.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
