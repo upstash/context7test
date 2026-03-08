@@ -2,11 +2,26 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** leu1h34mk1l-mme4174k
+**Document ID:** ul4rih69p-mmh2vd9q
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
+
+## Dart: Map Over List
+
+Dart example mapping over a list and printing the result.
+
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
+```
+
+
+## Code Example 2
 
 ## Rust: Read Lines
 
@@ -19,25 +34,6 @@ fn main(){
     for line in stdin.lock().lines() {
         println!("{}", line.unwrap());
     }
-}
-```
-
-
-## Code Example 2
-
-## C#: LINQ Query
-
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
-
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
 }
 ```
 
