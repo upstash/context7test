@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 1gqv19i0p5d-mme4aooz
+**Document ID:** awuvcrirojl-mmh2jb39
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,25 +10,29 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Haskell: Filter and Map
+## Scala: List Pipeline
 
-A minimal Haskell example filtering odd numbers and squaring them.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```haskell
-main :: IO ()
-main = print $ map (^2) $ filter odd [1..10]
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
+}
 ```
 
 
-## SQL: Group and Order
+## PHP: JSON Response
 
-SQL query that groups by name and orders by count descending.
+Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```php
+<?php
+header('Content-Type: application/json');
+echo json_encode(['status' => 'ok', 'time' => time()]);
 ```
 
 
