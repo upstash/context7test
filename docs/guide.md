@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** e30s5xm22tf-mmj7y7e3
+**Document ID:** kl5g1h21sm-mmj7y7fk
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,27 +10,44 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Dart: Map Over List
+## Scala: List Pipeline
 
-Dart example mapping over a list and printing the result.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
 }
 ```
 
 
-## PHP: JSON Response
+## Ruby: Word Count
 
-Outputs a JSON response in PHP for a simple API endpoint. Illustrates header setting and encoding.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```php
-<?php
-header('Content-Type: application/json');
-echo json_encode(['status' => 'ok', 'time' => time()]);
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
+```
+
+
+## Kotlin: Data Class Copy
+
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
+
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
+}
 ```
 
 
