@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** fdgs6f26bao-mmj7xcbo
+**Document ID:** 6zp5chzw7h5-mmj7y7e0
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,41 +10,37 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Bash: Count Files
+## JavaScript: Sum Array Elements
 
-Counts files in the current directory using common shell tools.
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
-## R: Vector Arithmetic
+## SQL: Group and Order
 
-Simple R vector example computing squares of a sequence.
+SQL query that groups by name and orders by count descending.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
-## C#: LINQ Query
+## Julia: Comprehension
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+Julia list comprehension generating cubes of a range.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
-}
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
 ```
 
 
