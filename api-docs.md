@@ -2,26 +2,11 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** ul4rih69p-mmh2vd9q
+**Document ID:** z0ulxyhouso-mmj8cky5
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
-
-## Dart: Map Over List
-
-Dart example mapping over a list and printing the result.
-
-```dart
-void main() {
-  final nums = [1,2,3,4,5];
-  final tripled = nums.map((n) => n * 3).toList();
-  print(tripled);
-}
-```
-
-
-## Code Example 2
 
 ## Rust: Read Lines
 
@@ -35,6 +20,18 @@ fn main(){
         println!("{}", line.unwrap());
     }
 }
+```
+
+
+## Code Example 2
+
+## Bash: Count Files
+
+Counts files in the current directory using common shell tools.
+
+```bash
+FILES=$(ls | wc -l)
+echo "Files: $FILES"
 ```
 
 
