@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** 1ccqdd1m3cj-mmjv9wwq
+**Document ID:** zgg8cyp6hw-mml2lm21
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,44 +10,44 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## Kotlin: Data Class Copy
+## Python: Fibonacci Generator
 
-Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
+A simple, readable Python generator for producing Fibonacci numbers. It illustrates lazy iteration and clarity.
 
-```kotlin
-data class User(val id:Int, val name:String, val active:Boolean)
-fun main(){
-  val u1 = User(1, "Ada", true)
-  val u2 = u1.copy(active = false)
-  println(u2)
-}
+```python
+def fib(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
+
+print(list(fib(10)))
 ```
 
 
-## R: Vector Arithmetic
+## Elixir: Enum Pipeline
 
-Simple R vector example computing squares of a sequence.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```r
-nums <- 1:5
-squares <- nums^2
-print(squares)
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
-## C#: LINQ Query
+## C++: Transform Vector
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+C++ transforms a vector in-place and prints the results.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+  vector<int> v{1,2,3,4,5};
+  transform(v.begin(), v.end(), v.begin(), [](int n){return n*2;});
+  for (auto n: v) cout<<n<<" ";
+  return 0;
 }
 ```
 
