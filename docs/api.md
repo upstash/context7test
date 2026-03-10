@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** bxnpyjdarvr-mml60yp3
+**Document ID:** l8s9rk54cbd-mml637pi
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -10,27 +10,37 @@ Each example includes a short description followed by a fenced code block.
 
 Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
 
-## SQL: Group and Order
+## Scala: List Pipeline
 
-SQL query that groups by name and orders by count descending.
+Uses Scala collections to filter and map a list with a clear pipeline.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```scala
+object Main {
+  def main(args: Array[String]): Unit = {
+    val nums = List(1,2,3,4,5)
+    val oddsSquared = nums.filter(_ % 2 == 1).map(n => n*n)
+    println(oddsSquared)
+  }
+}
 ```
 
 
-## Ruby: Word Count
+## Go: HTTP Server
 
-Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
+A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
 
-```ruby
-text = "to be or not to be"
-counts = Hash.new(0)
-text.split.each { |w| counts[w] += 1 }
-puts counts
+```go
+package main
+import (
+    "fmt"
+    "net/http"
+)
+func main(){
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
+        fmt.Fprintln(w, "Hello from Go!")
+    })
+    http.ListenAndServe(":8080", nil)
+}
 ```
 
 
