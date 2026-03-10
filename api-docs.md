@@ -2,36 +2,39 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** z0ulxyhouso-mmj8cky5
+**Document ID:** my2c7tbo9im-mml3a9cn
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Rust: Read Lines
+## C#: LINQ Query
 
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
+Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
 
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
+```csharp
+using System;
+using System.Linq;
+class Program {
+  static void Main(){
+    var nums = new[]{1,2,3,4,5};
+    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
+    Console.WriteLine(string.Join(",", squares));
+  }
 }
 ```
 
 
 ## Code Example 2
 
-## Bash: Count Files
+## Swift: Map and Filter
 
-Counts files in the current directory using common shell tools.
+Demonstrates Swift's map and filter on arrays for concise transformation.
 
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+```swift
+let nums = [1,2,3,4,5]
+let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
+print(evensDoubled)
 ```
 
 
