@@ -2,39 +2,33 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** my2c7tbo9im-mml3a9cn
+**Document ID:** xmdv6mo3nvs-mml6goau
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## C#: LINQ Query
+## Julia: Comprehension
 
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
+Julia list comprehension generating cubes of a range.
 
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
-}
+```julia
+nums = 1:5
+cubes = [n^3 for n in nums]
+println(cubes)
 ```
 
 
 ## Code Example 2
 
-## Swift: Map and Filter
+## TypeScript: Typed User Model
 
-Demonstrates Swift's map and filter on arrays for concise transformation.
+This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
 
-```swift
-let nums = [1,2,3,4,5]
-let evensDoubled = nums.filter { $0 % 2 == 0 }.map { $0 * 2 }
-print(evensDoubled)
+```typescript
+interface User { id: number; name: string; active: boolean }
+function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
+console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
