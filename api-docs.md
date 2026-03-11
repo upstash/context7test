@@ -2,11 +2,26 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 8sqy1viwfpp-mmlzurn7
+**Document ID:** d8noe9d7yoa-mmm5oqo5
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
+
+## Dart: Map Over List
+
+Dart example mapping over a list and printing the result.
+
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
+```
+
+
+## Code Example 2
 
 ## Kotlin: Data Class Copy
 
@@ -18,23 +33,6 @@ fun main(){
   val u1 = User(1, "Ada", true)
   val u2 = u1.copy(active = false)
   println(u2)
-}
-```
-
-
-## Code Example 2
-
-## Rust: Read Lines
-
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
-
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
 }
 ```
 
