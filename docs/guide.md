@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** k6j1mfge17-mmlzqkvr
+**Document ID:** 6j01kghqbg-mmlzr9dw
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -22,21 +22,6 @@ def fib(n):
         a, b = b, a + b
 
 print(list(fib(10)))
-```
-
-
-## Rust: Read Lines
-
-Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
-
-```rust
-use std::io::{self, BufRead};
-fn main(){
-    let stdin = io::stdin();
-    for line in stdin.lock().lines() {
-        println!("{}", line.unwrap());
-    }
-}
 ```
 
 
