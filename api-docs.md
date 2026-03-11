@@ -2,33 +2,40 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** xmdv6mo3nvs-mml6goau
+**Document ID:** 8sqy1viwfpp-mmlzurn7
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## Julia: Comprehension
+## Kotlin: Data Class Copy
 
-Julia list comprehension generating cubes of a range.
+Demonstrates Kotlin data classes and the copy method. Encourages immutable-style updates.
 
-```julia
-nums = 1:5
-cubes = [n^3 for n in nums]
-println(cubes)
+```kotlin
+data class User(val id:Int, val name:String, val active:Boolean)
+fun main(){
+  val u1 = User(1, "Ada", true)
+  val u2 = u1.copy(active = false)
+  println(u2)
+}
 ```
 
 
 ## Code Example 2
 
-## TypeScript: Typed User Model
+## Rust: Read Lines
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+Reads lines from stdin and echoes them in Rust. Highlights ownership-light IO usage.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```rust
+use std::io::{self, BufRead};
+fn main(){
+    let stdin = io::stdin();
+    for line in stdin.lock().lines() {
+        println!("{}", line.unwrap());
+    }
+}
 ```
 
 
