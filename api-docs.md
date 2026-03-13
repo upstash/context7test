@@ -2,33 +2,34 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** qaiutxb3di-mmp6vvtb
+**Document ID:** 4bpnpyca6ah-mmp7qadf
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## TypeScript: Typed User Model
+## JavaScript: Sum Array Elements
 
-This example shows a strongly-typed user interface and a function that formats user info. It highlights TypeScript's type safety.
+This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
 
-```typescript
-interface User { id: number; name: string; active: boolean }
-function formatUser(u: User): string { return `${u.id}:${u.name}:${u.active}` }
-console.log(formatUser({ id: 1, name: 'Ada', active: true }));
+```javascript
+const nums = [1, 2, 3, 4, 5];
+const total = nums.reduce((acc, n) => acc + n, 0);
+console.log(total);
 ```
 
 
 ## Code Example 2
 
-## Elixir: Enum Pipeline
+## SQL: Group and Order
 
-Elixir pipeline that filters even numbers and inspects the result.
+SQL query that groups by name and orders by count descending.
 
-```elixir
-nums = 1..10 |> Enum.to_list()
-evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
-IO.inspect(evens)
+```sql
+SELECT name, COUNT(*) AS c
+FROM users
+GROUP BY name
+ORDER BY c DESC;
 ```
 
 
