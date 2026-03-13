@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** k07vuzvk3w-mmp8rmqd
+**Document ID:** j0i8gg0x0un-mmp8t2bt
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -21,34 +21,27 @@ console.log(formatUser({ id: 1, name: 'Ada', active: true }));
 ```
 
 
-## Go: HTTP Server
+## R: Vector Arithmetic
 
-A minimal HTTP server in Go that responds with a greeting. It demonstrates net/http usage.
+Simple R vector example computing squares of a sequence.
 
-```go
-package main
-import (
-    "fmt"
-    "net/http"
-)
-func main(){
-    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request){
-        fmt.Fprintln(w, "Hello from Go!")
-    })
-    http.ListenAndServe(":8080", nil)
-}
+```r
+nums <- 1:5
+squares <- nums^2
+print(squares)
 ```
 
 
-## Ruby: Word Count
+## Dart: Map Over List
 
-Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
+Dart example mapping over a list and printing the result.
 
-```ruby
-text = "to be or not to be"
-counts = Hash.new(0)
-text.split.each { |w| counts[w] += 1 }
-puts counts
+```dart
+void main() {
+  final nums = [1,2,3,4,5];
+  final tripled = nums.map((n) => n * 3).toList();
+  print(tripled);
+}
 ```
 
 
