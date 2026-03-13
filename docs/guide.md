@@ -2,7 +2,7 @@
 
 This file is generated for E2E parsing.
 
-**Document ID:** m90j5mlv90j-mmp6ibr3
+**Document ID:** bcqfgumw6bg-mmp6mdmb
 
 This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
 
@@ -19,27 +19,6 @@ text = "to be or not to be"
 counts = Hash.new(0)
 text.split.each { |w| counts[w] += 1 }
 puts counts
-```
-
-
-## JavaScript: Sum Array Elements
-
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
-
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
-```
-
-
-## Bash: Count Files
-
-Counts files in the current directory using common shell tools.
-
-```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
 ```
 
 
