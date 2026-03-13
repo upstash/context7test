@@ -2,34 +2,34 @@
 
 This document contains code snippets and API documentation for testing parsing functionality.
 
-**Document ID:** 4bpnpyca6ah-mmp7qadf
+**Document ID:** r6iyvyox73-mmp92chz
 
 This document demonstrates API documentation parsing with a mix of code examples and structured API documentation.
 
 ## Code Example 1
 
-## JavaScript: Sum Array Elements
+## Ruby: Word Count
 
-This snippet demonstrates summing the numbers in an array using JavaScript's reduce. It showcases a concise, functional approach.
+Counts word frequencies in a sentence using Ruby’s expressive standard library. Simple and readable.
 
-```javascript
-const nums = [1, 2, 3, 4, 5];
-const total = nums.reduce((acc, n) => acc + n, 0);
-console.log(total);
+```ruby
+text = "to be or not to be"
+counts = Hash.new(0)
+text.split.each { |w| counts[w] += 1 }
+puts counts
 ```
 
 
 ## Code Example 2
 
-## SQL: Group and Order
+## Elixir: Enum Pipeline
 
-SQL query that groups by name and orders by count descending.
+Elixir pipeline that filters even numbers and inspects the result.
 
-```sql
-SELECT name, COUNT(*) AS c
-FROM users
-GROUP BY name
-ORDER BY c DESC;
+```elixir
+nums = 1..10 |> Enum.to_list()
+evens = Enum.filter(nums, fn n -> rem(n, 2) == 0 end)
+IO.inspect(evens)
 ```
 
 
