@@ -1,39 +1,27 @@
-# Auto-generated Test Document
+# Test Refresh Project
 
-This file is generated for E2E parsing.
+## Overview
+A test project for verifying default context refresh functionality.
 
-**Document ID:** xi5io82k68p-mmpbgto8
+## User Service
+The user service handles user creation and lookup operations.
 
-This document contains a variety of concise, self-contained code examples across multiple programming languages, demonstrating common patterns, data structures, I/O, and control flow to exercise parsing in a realistic yet compact way.
+## Auth Service
+The auth service handles authentication and token verification.
 
-Each example includes a short description followed by a fenced code block.
-
-Where helpful, examples may include brief variations in syntax or structure so the parser encounters a wider range of constructs across different ecosystems.
-
-## C#: LINQ Query
-
-Filters and projects a sequence using C# LINQ. Demonstrates expressive collection manipulation.
-
-```csharp
-using System;
-using System.Linq;
-class Program {
-  static void Main(){
-    var nums = new[]{1,2,3,4,5};
-    var squares = nums.Where(n=>n%2==1).Select(n=>n*n);
-    Console.WriteLine(string.Join(",", squares));
-  }
-}
-```
-
-
-## Bash: Count Files
-
-Counts files in the current directory using common shell tools.
-
+## Installation
 ```bash
-FILES=$(ls | wc -l)
-echo "Files: $FILES"
+npm install test-refresh
 ```
 
+## Usage
+```typescript
+import { UserService } from './src/user';
+import { AuthService } from './src/auth';
 
+const userService = new UserService();
+const authService = new AuthService();
+
+const user = await userService.createUser('john', 'john@example.com');
+const token = await authService.login('john', 'password');
+```
